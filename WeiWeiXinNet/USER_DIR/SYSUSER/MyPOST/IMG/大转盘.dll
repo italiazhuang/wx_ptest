@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[大转盘]]></Title>
+     <Description><![CDATA[<p>内容编辑</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/dzp.png]]></PicUrl>
+     <Url><![CDATA[Turntable/Turntable.aspx?id=<%ID%>]]></Url>
+ </NewsMsgData> 
+</weiweixinnet>

@@ -1,0 +1,4 @@
+﻿<p>
+ <a href="#" onclick="topnews();">微微信0.8欢迎使用 </a><script language="javascript">
+function topnews() {  jBox.open("iframe:USER_DIR/SYSUSER/GUNDONG/news.htm", "微微信", $(window).width() * 0.9, $(window).height()*0.6);   }
+</script></p>

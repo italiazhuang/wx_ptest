@@ -1,0 +1,10 @@
+
+
+CREATE TABLE [dbo].[WX_GGK](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](200) NULL,
+	[Cs] [int] NULL
+) ON [PRIMARY]
+
+GO
+

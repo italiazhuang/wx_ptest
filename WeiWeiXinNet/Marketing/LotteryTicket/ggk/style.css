@@ -1,0 +1,103 @@
+﻿body
+{
+		margin: 0;
+	padding: 0;color: #444444;
+	font: 14px/1.5 Microsoft YaHei, Helvitica, Verdana, Arial, san-serif;
+}
+.bd
+{
+ width:320px;
+ height:625px;
+ margin-left:auto;
+ margin-right:auto;	
+ background-image: url('../ggk/images/ggkbj.jpg');
+}
+.bd .cj
+{
+ width:320px;
+ height:200px;
+ float:left;	
+}
+.bd .cj .gjq
+{
+ width:100px;
+ height:30px;
+ margin-top:147px;
+ margin-left:120px;
+}
+.bd .sm
+{
+ width:300px;
+ height:auto;
+ float:left;
+ margin-top:10px;
+}
+.bd .sm .hang
+{
+ width:300px;
+ height:30px;
+ line-height:30px;
+ font-size:15px;
+ text-indent:2em;
+ color:#656565;
+}
+.csyw
+{
+ width:320px;
+ height:500px;
+ margin-left:auto;
+ margin-right:auto;	
+ background-image: url('../wx/csyw.jpg');
+}
+.zjl
+{
+ width:320px;
+ height:500px;
+ margin-left:auto;
+ margin-right:auto;	
+ background-image: url('../wx/zjl.jpg');
+}
+.zjl .xx
+{
+ width:320px;
+ height:150px;
+ float:left;
+ margin-top:300px;	
+}
+.zjl .xx .he
+{
+ width:320px;
+ height:30px;
+ float:left;
+ margin-top:20px;	
+}
+.zjjs
+{
+ width:320px;
+ height:500px;
+ margin-left:auto;
+ margin-right:auto;	
+ background-image: url('../wx/zjjs.jpg');
+}
+.zccj
+{
+ width:320px;
+ height:500px;
+ margin-left:auto;
+ margin-right:auto;	
+ background-image: url('../wx/zccj.jpg');
+}
+.zccj .xx1
+{
+ width:320px;
+ height:100px;
+ float:left;
+ margin-top:300px;	
+}
+.zccj .xx1 .he1
+{
+ width:320px;
+ height:50px;
+ float:left;
+ margin-top:20px;	
+}

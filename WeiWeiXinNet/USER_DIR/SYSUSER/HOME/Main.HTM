@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>微微信.NET </title>
+<script type="text/javascript" src="USER_DIR/SYSUSER/HOME/index/scripts/jquery.js"></script>
+<script type="text/javascript" src="USER_DIR/SYSUSER/HOME/index/scripts/tweetable.js"></script>
+<script type="text/javascript" src="USER_DIR/SYSUSER/HOME/index/scripts/custom.js"></script>
+<link href="USER_DIR/SYSUSER/HOME/index/css/style.css" rel="stylesheet" type="text/css">
+
+  <script language="javascript" type="text/javascript">
+        function onBridgeReady() {
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                WeixinJSBridge.call('hideOptionMenu');
+            });
+
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                WeixinJSBridge.call('hideToolbar');
+            });
+
+        }
+
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+            }
+        } else {
+            onBridgeReady();
+        }
+
+    </script> 
+
+
+
+<script type="text/javascript" language="javascript">   
+	function iFrameHeight() {   
+		var ifm= document.getElementById("iframepage");   
+		var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;   
+		if(ifm != null && subWeb != null) {
+		   ifm.height = subWeb.body.scrollHeight +80;
+		}   
+	}   
+</script>
+</head>
+<body>
+  <table width="100%"  border="0" cellpadding="0" cellspacing="0">
+        <tr >
+            <td>
+                <iframe  src="start.ashx" width="100%" scrolling="auto" frameborder="0" name="main" id="iframepage" onLoad="iFrameHeight()"></iframe>
+            </td>
+        </tr>
+        <tr height="48px">
+            <td >
+                <div class="navigation">
+                    <a id="home" class="selected" href='start.ashx' target="main">
+                        <img src="USER_DIR/SYSUSER/HOME/index/images/nav/xxyX63YryG.png" width="24" alt="img"><em class="under-icon-text">首页</em></a>
+                    <a id="picwords" href="cmd/news.ashx"  target="main">
+                        <img src="USER_DIR/SYSUSER/HOME/index/images/nav/Lngjm86JQq.png" width="24" alt="img"><em class="under-icon-text">图文</em></a>
+                    <a id="comunity" href="cmd/shangcheng.aspx" target="main">
+                        <img src="USER_DIR/SYSUSER/HOME/index/images/nav/2yFKO6TwKI.png" width="24" alt="img"><em class="under-icon-text">商店</em></a>
+                    <a id="minwall" href="cmd/shenghuo.aspx" target="main">
+                        <img src="USER_DIR/SYSUSER/HOME/index/images/nav/s22KaR0Wtc.png" width="24" alt="img"><em class="under-icon-text">微墙</em></a>
+                    <a id="my" href="cmd/wode.aspx" target="main">
+                        <img src="USER_DIR/SYSUSER/HOME/index/images/nav/J0uZbXQWvJ.png" width="24" alt="img"><em class="under-icon-text">我的</em></a>
+                </div>
+            </td>
+        </tr>
+    </table> 
+
+</body>
+</html> 

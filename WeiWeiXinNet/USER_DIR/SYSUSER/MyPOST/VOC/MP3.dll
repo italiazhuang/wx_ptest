@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+   <MusicMsgData>
+      <Title><![CDATA[音乐标题]]></Title>
+      <Description><![CDATA[音乐标题]]></Description>
+      <MusicUrl><![CDATA[/USER_DIR/SYSUSER/VOCDATA/Athlete-Wires.mp3]]></MusicUrl>
+      <HQMusicUrl><![CDATA[/USER_DIR/SYSUSER/VOCDATA/Athlete-Wires.mp3]]></HQMusicUrl>
+   </MusicMsgData> 
+</weiweixinnet>

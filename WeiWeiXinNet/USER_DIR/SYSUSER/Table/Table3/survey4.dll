@@ -1,0 +1,84 @@
+﻿<?xml version = "1.0"?>
+<WebSurvey redirecturl = "m2.aspx"
+              allowrepeats = "true"
+              cookiename = "WS:RepeatCookie">
+
+  <!-- Do not email results
+  <EmailResults>
+    <EmailTo>me@here.net</EmailTo>
+    <SmtpServer>some.smtp.server</SmtpServer>    
+  </EmailResults>
+  -->
+
+  <Group id = "grp_one" nextimage = "finish.gif">
+    <Question id = "First_Name" type = "shortans" cols = "30" required = "true">
+      <Statement>
+        <b>First name:</b>
+      </Statement>
+    </Question>
+
+    <Question id = "Last_name" type = "shortans" cols = "30" required = "true">
+      <Statement>
+        <b>Last Name:</b>
+      </Statement>
+    </Question>
+
+    <Question id = "Email" type = "shortans" cols = "30" required = "true">
+      <Statement>
+        <b>Email:</b>
+      </Statement>
+    </Question>
+
+    <Question id = "Favorite_food" type = "mcss" cols = "30" required = "true">
+      <Statement>
+        <b>What is your favorite food?</b>
+      </Statement>
+      <Responses>
+        <Response>Pizza</Response>
+        <Response>Beer</Response>
+        <Response>Sushi</Response>
+        <Response>Steak</Response>
+        <Response>Spinach</Response>
+      </Responses>
+    </Question>
+
+    <Question id = "Sports" type = "mcms" basecontrol = "listbox" required = "true">
+      <Statement>
+        <b>What sports do you play? (Ctrl+Click to multi-select)</b>
+      </Statement>
+      <Responses>
+        <Response>Tennis</Response>
+        <Response>Baseball</Response>
+        <Response>Football</Response>
+        <Response>Basketball</Response>
+        <Response>Bowling</Response>
+        <Response>Soccer</Response>
+      </Responses>
+    </Question>
+
+    <Question id = "Description" type = "essay" cols = "30" rows = "4" required = "true">
+      <Statement>
+        <b>Describe yourself.</b>
+      </Statement>
+    </Question>
+
+    <Question id = "Survey_is_useful" type = "mcss" required = "false">
+      <Statement>
+        <b>Do you think this survey is useful?</b>
+      </Statement>
+      <Responses>
+        <Response>Yes</Response>
+        <Response>No</Response>
+        <Response>Has potential</Response>
+        <Response>Give up! You suck at programming</Response>
+      </Responses>
+    </Question>
+
+    <Question id = "Comments" type = "essay" cols = "30" rows = "4" required = "false">
+      <Statement>
+        <b>Additional Comments:</b>
+      </Statement>
+    </Question>
+
+  </Group>
+</WebSurvey>

@@ -1,0 +1,1211 @@
+﻿<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <!-- base href="http://www.magicappstore.com/" -->
+	    <title>Word Poppers</title>
+        <meta name="description" content="Word Poppers is a simple word-based puzzle game.  The objective is to complete the unknown word by clicking on letters that are floating around in bubbles.  When you have completed the word you move on to the next.  Each level contains 10 words to complete and there are 8 different categories to choose from.">
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon" href="http://www.magicappstore.com/d/i/apps/10/128.jpg">
+        <link rel="apple-touch-icon-precomposed" href="http://www.magicappstore.com/d/i/apps/10/128.jpg">
+        <link rel="shortcut icon" href="http://www.magicappstore.com/documents/images/favicon.ico">
+
+        <style>
+            body {
+                overflow:hidden;
+                background: #000000;
+                margin:0;
+                padding:0;
+            }
+        </style>
+        <script src="Word%20Poppers%20-%20Mobile%20Word%20Puzzle%20Game_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-7547464-3']);
+            _gaq.push(['_trackPageview']);
+            var _aid = 10;
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+    </head>
+	<body>
+        
+    
+    <script type="text/javascript">
+        var aeb = "adc8317498d384b2b9d7c0e83f884352b";
+        var pageID = 1409;
+var tick = 0;
+var device = "";
+var useTouch = false;
+var gameSurface = null;
+var bubbles = null;
+var tiles = null;
+var mode = "splash";
+var gameWidth = 320;
+var gameHeight = 460;
+var lives = 5;
+var time = 0;
+var currentQList = null;
+var currentQ = 0;
+var currentDialogContent = null;
+
+var highscores = new Array();
+var bestLevelScores = new Array();
+var bestUserScores = new Array();
+var userID = "";
+var userIDDisplay = "";
+var instanceID = "";
+var level = 0;
+var totalQuestions = 0;
+var correctQuestions = 0;
+var timeRemaining = 0;
+var vlx;
+
+var qs1 = [
+    "What is the capital of *",
+    "* is the capital which country",
+    "France,England,Spain,Germany,Australia,New Zealand,Canada,Brazil,Argentina,Austria,Belgium,Bulgaria,Cameroon,Chile,China,Colombia,Costa Rica,Croatia,Cuba,Czech Republic,Denmark,Egypt,Fiji,Finland,Greece,Hungary,India,Indonesia,Iran,Iraq,Ireland,Israel,Italy,Jamaica,Japan,Lebanon,Libya,Mexico,Netherlands,Norway,Pakistan,Poland,Russia,Serbia,Sweden,Thailand,Turkey,Ukraine,Venezuela",
+    "Paris,London,Madrid,Berlin,Canberra,Wellington,Ottawa,Brasilia,Buenos Aires,Vienna,Brussels,Sofia,Yaounde,Santiago,Beijing,Bogota,San Jose,Zagreb,Havana,Prague,Copenhagen,Cairo,Suva,Helsinki,Athens,Budapest,New Delhi,Jakarta,Tehran,Baghdad,Dublin,Jerusalem,Rome,Kingston,Tokyo,Beirut,Tripoli,Mexico City,Amsterdam,Oslo,Islamabad,Warsaw,Moscow,Belgrade,Stockholm,Bangkok,Ankara,Kyiv,Caracas"
+    ];
+var qs1a = [
+    "What is this country:",
+    "",
+    "",
+    "France,England,Spain,Germany,Australia,New Zealand,the USA,Canada,Brazil,Argentina,Austria,Belgium,Bulgaria,Cameroon,Chile,China,Colombia,Costa Rica,Croatia,Cuba,Czech Republic,Denmark,Egypt,Fiji,Finland,Greece,Hungary,India,Indonesia,Iran,Iraq,Ireland,Israel,Italy,Jamaica,Japan,Lebanon,Libya,Mexico,Netherlands,Norway,Pakistan,Poland,Russia,Serbia,Sweden,Thailand,Turkey,Ukraine,Venezuela",
+    ];
+var qs2 = [
+    "The infant name of *",
+    "The parent of a *",
+    "Bear,Beaver,Cat,Cow,Dog,Duck,Eagle,Elephant,Fish,Fox,Goat,Goose,Hawk,Hen,Hippo,Horse,Kangaroo,Lion,Owl,Pig,Rabbit,Rat,Rooster,Sheep,Swan,Turkey,Zebra",
+    "Cub,Kit,Kitten,Calf,Puppy,Duckling,Eaglet,Calf,Fry,Cub,Kid,Gosling,Eyas,Pullet,Calf,Foal,Joey,Cub,Owlet,Piglet,Bunny,Pup,Cockerel,Lamb,Cygnet,Poult,Foal"
+    ];
+var qs2a = [
+    "Name this animal:",
+    "",
+    "",
+    "Bear,Beaver,Cat,Cow,Dog,Duck,Eagle,Elephant,Fish,Fox,Goat,Goose,Hawk,Hen,Hippo,Horse,Kangaroo,Lion,Owl,Pig,Rabbit,Rat,Rooster,Sheep,Swan,Turkey,Zebra",
+    ];
+var qs3 = [
+    "The opposite of *",
+    "The opposite of *",
+    "After,Answer,Arrive,Behind,Black,Bright,Cold,Day,Every,Fact,Girl,Here,Huge,Length,Long,Neat,Odd,Ornate,Past,Perfect,Prince,Remember,Sit,Strong,Sunny,Tall,Useless,Water",
+    "Before,Question,Depart,Ahead,White,Dull,Hot,Night,None,Fiction,Boy,There,Small,Width,Short,Messy,Even,Simple,Present,Flawed,Princess,Forget,Stand,Weak,Cloudy,Short,Useful,Ice"
+    ];
+var qs4 = [
+    "Name of the *",
+    "",
+    "1st Month,2nd Month,3rd Month,4th Month,5th Month,6th Month,7th Month,8th Month,9th Month,10th Month,11th Month,12th Month",
+    "January,February,March,April,May,June,July,August,September,October,November,December"
+    ];
+var qs5 = [
+    "A famous actor: * ...",
+    "A famous actor: ... *",
+    "Al,Arnold,Ben,Brad,Bruce,Bruce,Burt,Cary,Christian,Clint,Dan,David,Dennis,Denzel,Dudley,Dustin,Eddy,Gary,Gene,George,Gregory,Harrison,Henry,Hugh,Jack,Jerry,Jim,John,John,Keanu,Kevin,Mark,Mel,Michael,Nicolas,Orlando,Paul,Paul,Pierce,Robert,Robin,Russell,Sean,Sean,Steven,Sylvester,Tom,Tom,Tommy,Wesley,Will,William,Woody",
+    "Pacino,Schwazenegger,Affleck,Pitt,Lee,Willis,Reynolds,Grant,Slater,Eastwood,Aykroyd,Hasselhoff,Quaid,Washington,Moore,Hoffman,Murphy,Oldman,Hackman,Clooney,Peck,Ford,Fonda,Jackman,Nicholson,Lewis,Carrey,Travolta,Wayne,Reeves,Costner,Wahlberg,Gibson,Douglas,Cage,Bloom,Hogan,Reiser,Brosnan,Redford,Williams,Crowe,Bean,Connery,Seagal,Stallone,Cruise,Hanks,Lee Jones,Snipes,Smith,Shatner,Allen"
+    ];
+var qs6 = [
+    "A famous actress: * ...",
+    "A famous actress: ... *",
+    "Elizabeth,Judy,Marilyn,Audrey,Julie,Angelina,Helen,Jodie,Megan,Halle,Kate,Michelle,Uma,Liv,Sharon,Demi,Jennifer,Kim,Sienna,Liz,Kirsten,Renee,Catherine,Michell,Monica,Scarlett,Jessica,Cate,Kate,Cameron,Drew,Meryl,Kate,Keira,Katie,Reese,Nicole,Gwyneth,Meg,Courtney",
+    "Taylor,Garland,Monroe,Hepburn,Andrews,Jolie,Hunt,Foster,Fox,Berry,Beckinsale,Pfeiffer,Thurman,Tyler,Stone,Moore,Aniston,Cattrall,Miller,Hurley,Dunst,Zellweger,Zeta Jones,Monaghan,Bellucci,Johansson,Biel,Blanchett,Winslet,Diaz,Barrymore,Streep,Hudson,Knightley,Holmes,Witherspoon,Kidman,Paltrow,Ryan,Cox"
+    ];
+var qs7 = [
+    "A famous rock band: * ...",
+    "A famous rock band: ... *",
+    "Led,Pink,Van,Temple,Bee,Rolling,Beach,Fleetwood,ZZ,Pearl,Dire,Red Hot Chili,Bon,Beastie,Rage Against,Clearwater,Deep,Alice In,Duran,Black,Sex,Motley,Iron,Foo",
+    "Zeppelin,Floyd,Halen,Pilots,Gees,Stones,Boys,Mac,Top,Jam,Straits,Peppers,Jovi,Boys,The Machine,Revival,Purple,Chains,Duran,Sabbath,Pistols,Crue,Maiden,Fighters"
+    ];
+var qs8 = [
+    "A landmark: * ...",
+    "A landmark: ... *",
+    "Akershus,Angel,Balmoral,Big,Blue,Brandenburg,Buckingham,Casa,Champs,Fingal's,Fort,Golden Gate,Grand,Great,Mount,Niagara,Notre,Pyramids of,Red,Sistene,Statue of,Sydney,Victoria,White",
+    "Castle,Falls,Castle,Ben,Mosque,Gate,Palace,Mila,Elysees,Cave,Knox,Bridge,Canyon,Barrier Reef,Rushmore,Falls,Dame,Egypt,Square,Chapel,Liberty,Opera House,Falls,House"
+    ];
+var qs9 = [
+    "A videogame character: * ...",
+    "",
+    "Donkey,Horned,Vault,Marcus,Prince of,Miner,Samus,Duke,Solid,Lara,Gordon,Princess",
+    "Kong,Reaper,Boy,Fenix,Persia,Willy,Aran,Nukem,Snake,Croft,Freeman,Zelda"
+    ];
+var qs10 = [
+    "What is this fruit",
+    "",
+    "",
+    "Apple,Crabapple,Hawthorn,Pear,Apricot,Peach,Nectarines,Plum,Cherry,Blackberry,Raspberry,Mulberry,Strawberry,Cranberry,Blueberry,Gooseberry,Grape,Grapefruit,Kiwi fruit,Rhubarb,Pawpaw,Melon,Watermelon,Fig,Olive,Jujube,Pomegranate,Lemon,Lime,Mandarin,Orange,Tangerine,Avocado,Banana,Cacao,Coconut,Jackfruit,Mango,Pineapple,Vanilla,Carrot,Tomato"
+    ];
+var qs11 = [
+    "What is this Tree",
+    "",
+    "",
+    "Alder,Ash,Aspen,Beech,Silver Birch,Blackthorn,Dogwood,Elder,Hawthorn,Hazel,Holly,Ivy,Oak,Pine,Privet,Rhododendron,Snowberry,Spindle,Sycamore,Walnut,Whitebeam,Yew,Maple"
+    ];
+var qs12 = [
+    "A historical figure: * ...",
+    "A historical figure: ... *",
+    "Alfred the,Thomas,William,Anne,Napoleon,Robert the,Julius,Winston,Captain James,Oliver,Charles,Sir Francis,Albert,Michael,Benjamin,Sigmund,Galileo,Charles,Che,Adolf,John F,Abraham,Karl,Claude,Isaac,Richard,Pablo,Marco,Pol,Jack the,Franklin D,William,Joseph,Marie,Alan,Vincent,William,George,James,Oscar,William the",
+    "Great,Becket,Blake,Boleyn,Bonaparte,Bruce,Caesar,Churchill,Cook,Cromwell,Dickens,Drake,Einstein,Faraday,Franklin,Freud,Galilei,de Gaulle,Guevara,Hitler,Kennedy,Lincoln,Marx,Monet,Newton,Nixon,Picasso,Polo,Pot,Ripper,Roosevelt,Shakespeare,Stalin,Stopes,Turing,Van Gogh,Wallace,Washington,Watt,Wilde,Conqueror"
+    ];
+var qs13 = [
+    "A historical figure",
+    "",
+    "",
+    "Archimedes,Augustus,Boudicca,Claudius,Cleopatra,Macbeth,Michelangelo,Nero,St Patrick,Pythagoras,Rembrandt,Spartacus,Suetonius,Tiberius,Tutankhamun"
+    ];
+function run() {start(); }
+
+function boot() {
+    device = getDevice();
+    
+    if (device != "Web") {
+        useTouch = true;
+        aTS("startMoreGames", touchMoreGames);
+        aTS("startPlay", touchStart);
+        aTS("lv1Select", touchLV1Select);
+        aTS("lv2Select", touchLV2Select);
+        aTS("lv3Select", touchLV3Select);
+        aTS("lv4Select", touchLV4Select);
+        aTS("lv5Select", touchLV5Select);
+        aTS("lv6Select", touchLV6Select);
+        aTS("lv7Select", touchLV7Select);
+        aTS("lv8Select", touchLV8Select);
+        aTS("lv9Select", touchLV9Select);
+        
+        aTS("quit2", touchQuit);
+        aTS("continue1", touchContinueToLevSelect);
+        document.body.addEventListener('touchstart', touchProcess);
+    }
+
+    vlx = new VectorlightGame();
+    vlx.setUrl();
+
+    userID = vlx.getUsername();
+    userIDDisplay = userID;
+
+    if (userID == null) {
+        userIDDisplay = "Guest";
+    }
+
+    dg("userLoggedIn").innerHTML = userIDDisplay;
+
+    gameSurface = dg("stage");
+    setInterval(loop, 33);
+}
+
+function touchMoreGames(e) {
+    window.location = "http://www.snappygames.com";
+}
+
+function touchQuit(e) {
+    quit();
+    return cD(e);
+}
+
+function touchContinueToLevSelect(e) {
+    continueToLevSelect();
+    return cD(e);
+}
+
+function touchLV1Select(e) {
+    levSel(1);
+    return cD(e);
+}
+
+function touchLV2Select(e) {
+    levSel(2);
+    return cD(e);
+}
+
+function touchLV3Select(e) {
+    levSel(3);
+    return cD(e);
+}
+
+function touchLV4Select(e) {
+    levSel(4);
+    return cD(e);
+}
+
+function touchLV5Select(e) {
+    levSel(5);
+    return cD(e);
+}
+
+function touchLV6Select(e) {
+    levSel(6);
+    return cD(e);
+}
+
+function touchLV7Select(e) {
+    levSel(7);
+    return cD(e);
+}
+
+function touchLV8Select(e) {
+    levSel(8);
+    return cD(e);
+}
+
+function touchLV9Select(e) {
+    levSel(9);
+    return cD(e);
+}
+
+function touchStart(e) {
+    fadeIn('select');
+    return cD(e);
+}
+
+function touchProcess(e) {
+    if (mode != "front") {
+        return cD(e);
+    }
+
+    return true;
+}
+
+function cD(e) {
+    if (e != null) {
+        e.stopPropagation();
+        e.preventDefault();
+    }
+    return false;
+}
+
+function updateAfterChange(cO) {
+    scrollToTop();
+}
+
+function levSel(no) {
+    level = no;
+    setupGame();
+
+    return false;
+}
+
+function showDialog(content) {
+    sh("dialog");
+    sh(content);
+
+    currentDialogContent = content;
+}
+
+function hideDialog() {
+    hd("dialog");
+
+    if (currentDialogContent != null) {
+        hd(currentDialogContent);
+    }
+}
+
+function retry() {
+    setupGame();
+}
+
+function quit() {
+    disposeQ();
+    hideDialog();
+    fadeIn("front");
+}
+
+function continueToLevSelect() {
+    disposeQ();
+    hideDialog();
+    fadeIn("select");
+}
+
+function fadeIn(v) {
+    switch (v) {
+        case "select":
+            setupLevSelect();
+            break;
+        case "front":
+            setupFront();
+            break;
+        case "gameover":
+            setupGameOver();
+            break;
+        case "finish":
+            setupFinish();
+            break;
+    }
+}
+
+function setupGameOver() {
+    mode = "gameover";
+
+    showDialog("gameover");
+}
+
+function setupFinish() {
+    mode = "finish";
+
+    timeRemaining = time;
+
+    var tempQScore = correctQuestions * 1000;
+    var tempTBomus = timeRemaining >> 1;
+    var tempTotal = tempQScore + tempTBomus;
+    var title = "";
+    
+    if (correctQuestions == 0) {
+        title = "BAD LUCK!";
+    }
+    else if (correctQuestions <= 3) {
+        title = "BETTER LUCK<br />NEXT TIME!";
+    }
+    else if (correctQuestions <= 6) {
+        title = "NOT BAD!";
+    }
+    else if (correctQuestions <= 9) {
+        title = "VERY GOOD!";
+    }
+    else {
+        title = "CONGRATULATIONS!";
+    }
+
+    if (vlx.getUserId() != null) {
+        dg("finishLogin").innerHTML = "Your highscore has been submitted!";
+    }
+    else {
+        dg("finishLogin").innerHTML = "Please login to save your highscores!";
+    }
+
+    dg("finishBest").innerHTML = "";// "Level Best: " + pad(bestLevelScores[level].score, 5) + " by " + bestLevelScores[level].user;
+    dg("finishHeading").innerHTML = title;
+    
+    dg("statQAnswered").innerHTML = correctQuestions + " of " + totalQuestions;
+    dg("statQScore").innerHTML = pad(tempQScore, 4);
+    dg("statTime").innerHTML = pad(tempTBomus, 4);
+    dg("statTotal").innerHTML = pad(tempTotal, 5);
+
+    recordHighscore(tempTotal);
+
+    showDialog("complete");
+}
+
+function setupFront() {
+    dg("splash").style.display = "none";
+    dg("stage").style.display = "block";
+
+    mode = "front";
+
+    hd("lives");
+    hd("timer");
+    hd("questionBack");
+    hd("question");
+    sh("front");
+}
+
+function setupLevSelect() {
+    mode = "select";
+
+    hd("front");
+    hd("lives");
+    hd("timer");
+    hd("questionBack");
+    hd("question");
+
+    showDialog("levSelect");
+}
+
+function setupGame() {
+    hideDialog();
+
+    sh("lives");
+    sh("timer");
+    sh("questionBack");
+    sh("question");
+
+    mode = "play";
+    
+    totalQuestions = 10;
+    correctQuestions = 0;
+    timeRemaining = 0;
+
+    currentQ = -1;
+    currentQList = createQuestionSet();
+
+    var seconds = 244;
+    time = seconds * 30;
+
+    nextQ();
+}
+
+function nextQ() {
+    currentQ++;
+    if (currentQ < currentQList.length) {
+        create(currentQ + 1, currentQList[currentQ].q + "?", currentQList[currentQ].a, 2);
+    }
+    else {
+        fadeIn("finish");
+    }
+}
+
+function createQuestionSet() {
+    var qs = new Array();
+
+    switch (level) {
+        case 1:
+            qs.push(qs1);
+            qs.push(qs1a);
+            break;
+        case 2:
+            qs.push(qs5);
+            qs.push(qs6);
+            break;
+        case 3:
+            qs.push(qs7);
+            break;
+        case 4:
+            qs.push(qs8);
+            break;
+        case 5:
+            qs.push(qs2);
+            qs.push(qs2a);
+            break;
+        case 6:
+            qs.push(qs11);
+            break;
+        case 7:
+            qs.push(qs10);
+            break;
+        case 8:
+            qs.push(qs12);
+            qs.push(qs13);
+            break;
+        case 9:
+            qs.push(qs1);
+            qs.push(qs1a);
+            qs.push(qs2);
+            qs.push(qs2a);
+            qs.push(qs3);
+            qs.push(qs4);
+            qs.push(qs5);
+            qs.push(qs6);
+            qs.push(qs7);
+            qs.push(qs8);
+            qs.push(qs9);
+            qs.push(qs10);
+            qs.push(qs11);
+            qs.push(qs12);
+            qs.push(qs13);
+            break;
+    }
+
+    var result = new Array();
+    var o = getQuestions(qs, totalQuestions);
+    
+    return o;
+}
+
+function getQuestions(qLists, count) {
+    var results = new Array();
+    var i;
+    var index;
+    var found = false;
+    var nQ;
+
+
+    while (results.length < count) {
+        index = (Math.random() * qLists.length) >> 0;
+        
+        if (index >= qLists.length) {
+            index = 0;
+        }
+
+        if (index < qLists.length) {
+            nQ = getRandomQuestion(qLists[index], results);
+            if (nQ != null) {
+                results.push(nQ);
+            }
+        }
+        else {
+            break;
+        }
+    }
+
+    return results;
+}
+
+function getRandomQuestion(qList, ignore) {
+    var result = null;
+    var i;
+    var found = false;
+    var t;
+    var index;
+    var answers;
+    var questions;
+    var duplicate;
+
+    questions = qList[2].split(",");
+    answers = qList[3].split(",");
+
+    if (qList[2] == "") {
+        questions = qList[3].split(",");
+    }
+
+    while (!found) {
+        index = (Math.random() * answers.length) >> 0;
+        
+        if (index < answers.length && index < questions.length) {
+            t = answers[index];
+
+            duplicate = false;
+
+            for (i = 0; i < ignore.length; i++) {
+                if (t == ignore[i].a) {
+                    duplicate = true;
+                    break;
+                }
+            }
+
+            if (!duplicate) {
+                result = new Object();
+                result.q = qList[0].replace("*", questions[index]);
+                result.a = answers[index];
+                found = true;
+                break;
+            }
+            else {
+                return null;
+            }
+        }
+    }
+
+    return result;
+}
+
+function disposeQ() {
+    var i;
+
+    if (bubbles != null) {
+        for (i = 0; i < bubbles.length; i++) {
+            gameSurface.removeChild(bubbles[i]);
+        }
+        bubbles = null;
+    }
+
+    if (tiles != null) {
+        for (i = 0; i < tiles.length; i++) {
+            gameSurface.removeChild(tiles[i]);
+        }
+        tiles = null;
+    }
+}
+
+function create(no, question, word, maxSpeed) {
+    disposeQ();
+    word = word.toUpperCase();
+    
+    var i;
+    var a;
+    var tileWidth = 30;
+    var tileX = (gameWidth - (word.length * tileWidth)) >> 1;
+    var tileY = gameHeight - 38;
+    var letters = new Array();
+    var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var maxBubbles = word.length * 2;
+
+    if (maxBubbles < 10) {
+        maxBubbles = 10;
+    }
+
+    for (i = 0; i < word.length; i++) {
+        letters.push(word[i]);
+    }
+    
+    for (i = 0; i < alphabet.length; i++) {
+        if (!isLetterInWord(word, alphabet[i])) {
+            letters.push(alphabet[i]);
+            if (letters.length > maxBubbles) {
+                break;
+            }
+        }
+    }
+
+    bubbles = new Array();
+    tiles = new Array();
+    dg("questionNo").innerHTML = no + ".";
+    dg("questionText").innerHTML = question;
+    var className;
+
+    for (i = 0; i < letters.length; i++) {
+        className = letters[i];
+
+        if (className == " ") {
+            className = "space";
+        }
+        a = dce("div", "bubble b_" + className);
+        a.c = letters[i];
+        a.dirX = -1 + (Math.random() * 2);
+        a.dirY = -1 + (Math.random() * 2);
+        a.speed = Math.random() * maxSpeed;
+        a.cWidth = 50;
+        a.cHeight = 50;
+        a.x = Math.random() * (gameWidth - a.cWidth);
+        a.y = Math.random() * (gameHeight - a.cHeight);
+        //a.innerHTML = letters[i];
+        a.popped = false;
+        a.isActive = true;
+        uIP(a);
+        gameSurface.appendChild(a);
+        bubbles.push(a);
+        
+        if (useTouch) {
+            a.addEventListener('touchstart', bubbleClick, false);
+        }
+        else {
+            a.onclick = bubbleClick;
+        }
+    }
+
+    for (i = 0; i < word.length; i++) {
+        a = dce("div", "wordTile");
+        a.c = word[i];
+        a.innerHTML = "?";
+        a.x = tileX;
+        a.y = tileY;
+        a.complete = false;
+        a.style.zIndex = 1;
+        uIP(a);
+        gameSurface.appendChild(a);
+        tiles.push(a);
+
+        tileX += tileWidth;
+    }
+
+    lives = 5;
+    updateLives();
+}
+
+function isLetterInWord(word, letter) {
+    var result = false;
+    var i;
+    
+    for (i = 0; i < word.length; i++) {
+        if(word[i] == letter) {
+            result = true;
+            break;
+        }
+    }
+    
+    return result;
+}
+
+function updateLives() {
+    if (lives >= 5) {
+        dg("life5").style.opacity = 1;
+    }
+    else {
+        dg("life5").style.opacity = 0.4;
+    }
+
+    if (lives >= 4) {
+        dg("life4").style.opacity = 1;
+    }
+    else {
+        dg("life4").style.opacity = 0.4;
+    }
+    
+    if (lives >= 3) {
+        dg("life3").style.opacity = 1;
+    }
+    else {
+        dg("life3").style.opacity = 0.4;
+    }
+
+    if (lives >= 2) {
+        dg("life2").style.opacity = 1;
+    }
+    else {
+        dg("life2").style.opacity = 0.4;
+    }
+
+    if (lives >= 1) {
+        dg("life1").style.opacity = 1;
+    }
+    else {
+        dg("life1").style.opacity = 0.4;
+    }
+}
+
+function updateTime() {
+    var ms = parseInt(time * 33);
+    var secs = Math.floor(ms / 1000);
+    ms = ms - (secs * 1000);
+    var mins = Math.floor(secs / 60);
+    secs = secs - (mins * 60);
+
+    var s = pad(mins, 2) + pad(secs, 2);
+
+    dg("score1").className = "num" + s.charAt(0);
+    dg("score2").className = "num" + s.charAt(1);
+    dg("score3").className = "num" + s.charAt(2);
+    dg("score4").className = "num" + s.charAt(3);
+}
+
+function pad(number, length) {
+
+    var str = '' + number;
+    while (str.length < length) {
+        str = '0' + str;
+    }
+
+    return str;
+}
+
+function bubbleClick(e) {
+    var i;
+    var hit = false;
+    var tile = null;
+
+    if (this.popped) {
+        return;
+    }
+
+    for (i = 0; i < tiles.length; i++) {
+        if (!tiles[i].complete && tiles[i].c == this.c) {
+            tiles[i].complete = true;
+            tile = tiles[i];
+            hit = true;
+            break;
+        }
+    }
+
+    this.popped = true;
+
+    if (hit) {
+        this.tX = tile.x - 6;
+        this.tY = tile.y - 4;
+        this.tile = tile;
+        this.className = "bubble popped";
+        this.innerHTML = this.c;
+        this.style.zIndex = 2;
+    }
+    else {
+        this.style.display = "none";
+        
+        lives--;
+        if (lives <= 0) {
+            lives = 0;
+            nextQ();
+            //fadeIn("gameover");
+        }
+        updateLives();
+    }
+
+    return cD(e);
+}
+
+var splashTimer = 20;
+var splashOpacity = 0;
+
+function loop() {
+    var i;
+
+    if (window.innerHeight <= 460) {
+        gameHeight = window.innerHeight;
+    }
+
+    if (splashTimer == 0) {
+        setupFront();
+        splashTimer = -1;
+    }
+    else {
+        document.getElementById("loadingProgress").innerHTML = "Loading 100%";
+        document.getElementById("splash").style.opacity = splashOpacity;
+
+        splashTimer--;
+        splashOpacity += 0.05;
+        if (splashOpacity > 1) {
+            splashOpacity = 1;
+        }
+    }
+
+    switch (mode) {
+        case "front":
+            if (scrolled > 0 && window.pageYOffset < 10) {
+                window.scrollTo(0, 0);
+                scrolled--;
+            }
+            break;
+        case "play":
+            updateInPlay();
+            break;
+    }
+
+    tick++;
+}
+
+var scrolled = 60;
+
+function updateInPlay() {
+    var i;
+    var a;
+    var b;
+    var c;
+
+    for (i = 0; i < bubbles.length; i++) {
+        b = bubbles[i];
+        if (!b.isActive) {
+            continue;
+        }
+
+        if (b.popped) {
+            b.x += (b.tX - b.x) * 0.25;
+            b.y += (b.tY - b.y) * 0.25;
+
+            if (b.x >= b.tX - 2 && b.x <= b.tX + 2 && b.y >= b.tY - 2 && b.y <= b.tY + 2) {
+                b.tile.innerHTML = b.tile.c;
+                b.style.display = "none";
+                b.isActive = false;
+                letterLanded();
+            }
+        }
+        else {
+            b.x += (b.dirX * b.speed);
+            b.y += (b.dirY * b.speed);
+
+            if (b.x > gameWidth - b.cWidth || b.x < 0) {
+                b.dirX = -b.dirX;
+            }
+            if (b.y > gameHeight - b.cHeight || b.y < 0) {
+                b.dirY = -b.dirY;
+            }
+        }
+
+        uIP(b);
+    }
+
+    time--;
+    if (time <= 0) {
+        time = 0;
+        fadeIn("finish");
+    }
+    updateTime();
+}
+
+function letterLanded() {
+    var complete = 0;
+    
+    for (i = 0; i < tiles.length; i++) {
+        if (tiles[i].complete) {
+            complete++;
+        }
+    }
+
+    if (complete >= tiles.length) {
+        correctQuestions++;
+        nextQ();
+    }
+}
+
+function dce(t, c) {
+    var a = document.createElement(t);
+    a.className = c;
+    return a;
+}
+
+function dg(id) {
+    return document.getElementById(id);
+}
+
+function hd(id) {
+    dg(id).style.display = "none";
+}
+
+function sh(id) {
+    dg(id).style.display = "block";
+}
+
+function aTS(id, fn) {
+    dg(id).addEventListener('touchstart', fn, false);
+}
+
+function aTE(id, fn) {
+    dg(id).addEventListener('touchend', fn, false);
+}
+
+function uIP(obj) {
+    var xy = (obj.x | 0) + "px," + (obj.y | 0) + "px";
+
+    obj.style.webkitTransform = "translate3d(" + xy + ",0)";
+    obj.style.MozTransform = "translate(" + xy + ")";
+    obj.style.msTransform = obj.style.MozTransform;
+}
+
+function getDevice() {
+    var deviceName = "Web";
+
+    if (navigator.userAgent.match(/iPad/i) != null) {
+        deviceName = "iPad";
+    }
+    else if (navigator.userAgent.match(/iPod/i) != null) {
+        deviceName = "iPod";
+    }
+    else if (navigator.userAgent.match(/iPhone/i) != null) {
+        deviceName = "iPhone";
+    }
+    else if (navigator.userAgent.match(/Android/i) != null) {
+        deviceName = "Android";
+    }
+
+    return deviceName;
+}
+
+function scrollToTop() {
+    return;
+    setTimeout(function () { window.scrollTo(0, 40); }, 400);
+}
+
+function recordHighscore(score) {
+    if (score > 0) {
+        var task = level + 16;
+
+        vlx.saveAchievement(task, score);
+    }
+}
+
+function recordGamePlay() {
+}
+
+function Highscore(user, score, level) {
+    this.user = user;
+    this.score = score;
+    this.level = level;
+}
+    </script>
+    <link href="word_poppers_data/common.htm" rel="stylesheet" type="text/css">
+    <script src="word_poppers_data/jquery.js"></script>
+    <script src="word_poppers_data/gameFN.js" type="text/javascript"></script>
+    <script src="word_poppers_data/util.js" type="text/javascript"></script>
+
+    <h1 style="color:#CCCCCC; font-family:arial; font-size:10px; margin:0; padding:0; position:absolute; text-align:center; top:130px; width:100%;">
+    <!-- google_ad_section_start -->
+        Mobile, Tablet Game for iPhone, Android, iPad, iPod
+    <!-- google_ad_section_end -->
+    </h1>
+
+    <script type="text/javascript">
+    var booted = false;
+
+    function start() {
+        if (!booted) {
+            //doCheck();
+            updateAfterChange(false);
+            boot();
+
+            booted = true;
+        }
+    }
+
+    document.body.onload = start;
+	</script>
+
+<style>
+        * { margin: 0; -webkit-user-select: none; }
+        #stage { width:320px; height:460px; background:#ffffff; font-family:Arial; position:relative; background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/back1.gif) repeat-x; }
+        #red { width:320px; height:460px; background:#ff0000; opacity:0.5; }
+        
+        .bubble { position:absolute; background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/bubbles.png)  no-repeat; cursor:pointer; width:50px; height:40px; text-align:center; padding-top:10px; font-size:25px; font-weight:bold; }
+        .b_A { background-position:0px 0px; }
+        .b_B { background-position:-50px 0px; }
+        .b_C { background-position:-100px 0px; }
+        .b_D { background-position:-150px 0px; }
+        .b_E { background-position:-200px 0px; }
+        .b_F { background-position:-250px 0px; }
+        .b_G { background-position:-300px 0px; }
+        .b_H { background-position:0px -50px; }
+        .b_I { background-position:-50px -50px; }
+        .b_J { background-position:-100px -50px; }
+        .b_K { background-position:-150px -50px; }
+        .b_L { background-position:-200px -50px; }
+        .b_M { background-position:-250px -50px; }
+        .b_N { background-position:-300px -50px; }
+        .b_O { background-position:0px -100px; }
+        .b_P { background-position:-50px -100px; }
+        .b_Q { background-position:-100px -100px; }
+        .b_R { background-position:-150px -100px; }
+        .b_S { background-position:-200px -100px; }
+        .b_T { background-position:-250px -100px; }
+        .b_U { background-position:-300px -100px; }
+        .b_V { background-position:0px -150px; }
+        .b_W { background-position:-50px -150px; }
+        .b_X { background-position:-100px -150px; }
+        .b_Y { background-position:-150px -150px; }
+        .b_Z { background-position:-200px -150px; }
+        .b_space { background-position:-250px -150px; }
+        .popped { color:#000000; background:none; }
+        #lives { float:right; display:block; margin:30px 2px 0px 0px; }
+        .life { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/heart.png) no-repeat; z-index:1; float:left; width:18px; height:19px; z-index:1; }
+        .wordTile { position:absolute; width:28px; height:32px; padding-top:4px; border:1px solid #aF974E; text-align:center; background:#EFD78E; font-size:25px; font-weight:bold; float:left; }
+    
+        #questionBack { position:absolute; z-index:1; height:28px; width:100%; background:#000000; opacity:0.7; }
+        #question { position:absolute; z-index:1; color:#ffff00; width:100%; font-size:16px; }
+        #questionNo { padding:4px; float:left; font-weight:bold; }
+        #questionText { padding:4px; float:left; }
+        
+        #timer { z-index:1; margin:30px 0px 0px 2px; float:left; }
+        #timer div { float:left; z-index:1; display:block; width:8px; height:12px; color:#ffffff; font-family:Arial; font-size:11px; font-weight:bold; }
+
+        .num0 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat 0px 0px; }
+        .num1 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -8px 0px; }
+        .num2 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -16px 0px; }
+        .num3 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -24px 0px; }
+        .num4 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -32px 0px; }
+        .num5 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -40px 0px; }
+        .num6 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -48px 0px; }
+        .num7 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -56px 0px; }
+        .num8 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -64px 0px; }
+        .num9 { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/number.png) no-repeat -72px 0px; }
+
+        #dialog { position:absolute; width:320px; height:460px; background:#000000; opacity:0.9; z-index:2; }
+        #levSelect { position:absolute; top:50px; }
+        #levSelect .row { margin:0px auto 0px auto; width:314px; height:68px; }
+        #levSelect .row .lev { float:left; display:block; width:96px; margin:2px; color:#ffffff; text-align:center; font-size:18px; text-decoration:none; }
+        
+        .red { background:#ED2B30; border:2px solid #ED2B30; height:54px; padding-top:10px; }
+        .red:hover { border:2px solid #ffffff; }
+        .green { background:#0CCC1A; border:2px solid #0CCC1A; height:44px; padding-top:20px; }
+        .green:hover { border:2px solid #ffffff; }
+        .blue { background:#4475CE; border:2px solid #4475CE; height:54px; padding-top:10px; }
+        .blue:hover { border:2px solid #ffffff; }
+        .red2 { background:#DD1B20; border:2px solid #DD1B20; height:44px; padding-top:20px; }
+        .red2:hover { border:2px solid #ffffff; }
+        .green2 { background:#00BC0A; border:2px solid #00BC0A; height:44px; padding-top:20px; }
+        .green2:hover { border:2px solid #ffffff; }
+        .blue2 { background:#3465BE; border:2px solid #3465BE; height:54px; padding-top:10px; }
+        .blue2:hover { border:2px solid #ffffff; }
+        .red3 { background:#CD0B10; border:2px solid #CD0B10; height:44px; padding-top:20px; }
+        .red3:hover { border:2px solid #ffffff; }
+        .green3 { background:#00AC00; border:2px solid #00AC00; height:44px; padding-top:20px; }
+        .green3:hover { border:2px solid #ffffff; }
+        .blue3 { background:#EA9E3C; border:2px solid #EA9E3C; height:44px; padding-top:20px; }
+        .blue3:hover { border:2px solid #ffffff; }
+        
+        .button { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/button.png) no-repeat; width:138px; height:38px; padding:11px 2px 0px 0px; display:block; text-decoration:none; text-align:center; font-family:Arial; font-weight:bold; font-size:18px; color:#494130; }
+        .button:hover { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/button.png) no-repeat; color:#595140; text-decoration:none; }
+        .smallbutton { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/buttonSmall.gif) no-repeat; width:68px; height:16px; padding:4px 0px 0px 0px; display:block; text-decoration:none; text-align:center; font-family:Arial; font-weight:bold; font-size:12px; color:#494130; }
+        .smallbutton:hover { background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/buttonSmall.gif) no-repeat; color:#595140; text-decoration:none; }
+
+        #front { width:320px; height:460px; background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/back2.jpg) no-repeat; position:absolute;  }
+        #tanklogo { position:absolute; width:318px; height:52px; background:url(a775ddca891504984b4d4831addad5085.ashx?i=wordpopper/logo.png) no-repeat; top:30px; left:4px; }
+
+        #scores { border-collapse:collapse; padding:0px; position:absolute; opacity:0.7; top:106px; left:20px; width:280px; font-family:Arial; font-size:12px; }
+        #scores tr th { padding:4px; background:#000000; color:#ffffff; font-weight:bold; }
+        #scores tr td { padding:0px 4px 4px 4px; background:#000000; color:#ffffff; text-align:center; }
+
+        #complete #table { width:320px; position:absolute; top:190px; }
+        #complete #table .row { width:200px; float:left; margin:3px 0px 3px 60px; font-size:12px; position:static; font-family:arial; }
+        #complete #table .row .label { width:118px; float:left; text-align:right; color:#eeeeee; padding-right:8px; position:static; }
+        #complete #table .row .value { width:70px; float:left; text-align:left; font-weight:bold; position:static; color:#ffffff; }
+
+        .popupContent { position:absolute; width:320px; height:460px; z-index:3; }
+    </style>
+
+<div style="width:320px; height:480px; margin:0px auto;; position:relative;">
+<div id="stage" style="display: block;">
+        <div id="red" style="display:none;"></div>
+        <div style="display: none;" id="lives">
+            <div id="life1" class="life"></div>
+            <div id="life2" class="life"></div>
+            <div id="life3" class="life"></div>
+            <div id="life4" class="life"></div>
+            <div id="life5" class="life"></div>
+        </div>
+        
+        <div style="display: none;" id="timer">
+            <div id="score1" class="num0"></div>
+            <div id="score2" class="num1"></div>
+            <div style="margin-top:-2px; width:4px; color:#ffffff;">:</div>
+            <div id="score3" class="num2"></div>
+            <div id="score4" class="num3"></div>
+        </div>
+        
+        <div style="display: none;" id="questionBack"></div>
+        <div style="display: none;" id="question"><div id="questionNo"></div><div id="questionText"></div></div>
+        
+        <div id="front" style="display: block;">
+            <div id="tanklogo">&nbsp;</div>
+            &nbsp;<a id="startPlay" class="button" href="#" onclick="fadeIn('select'); return false;" 
+                style="position:absolute; top:240px; right:100px;">PLAY</a>
+            <strong id="userLoggedIn" style="position:static; display:none;">Guest</strong>
+        </div>
+        
+        <div id="dialog" style="display:none;"></div>
+        <div id="levSelect" style="display:none;" class="popupContent">
+            <p style="text-align:center; font-size:28px; color:#ffffff; font-family:Arial; width:320px;">SELECT A TOPIC</p>
+            <div class="row">
+                <a id="lv1Select" href="#" class="lev red" onclick="return levSel(1);">Capital Cities</a>
+                <a id="lv2Select" href="#" class="lev green" onclick="return levSel(2);">Hollywood</a>
+                <a id="lv3Select" href="#" class="lev blue" onclick="return levSel(3);">Rock Bands</a>
+            </div>
+            <div class="row">
+                <a id="lv4Select" href="#" class="lev red2" onclick="return levSel(4);">Landmarks</a>
+                <a id="lv5Select" href="#" class="lev green2" onclick="return levSel(5);">Animals</a>
+                <a id="lv6Select" href="#" class="lev blue2" onclick="return levSel(6);">Trees &amp; Shrubs</a>
+            </div>
+            <div class="row">
+                <a id="lv7Select" href="#" class="lev red3" onclick="return levSel(7);">Fruit</a>
+                <a id="lv8Select" href="#" class="lev green3" onclick="return levSel(8);">History</a>
+                <a id="lv9Select" href="#" class="lev blue3" onclick="return levSel(9);"><strong>Random</strong></a>
+            </div>
+        </div>
+        
+        <div id="gameover" class="popupContent" style="display:none;">
+            <p style="text-align:center; font-size:28px; color:#ffffff; font-family:Arial; top:150px; position:absolute; width:320px;">GAME OVER</p>
+            <a id="quit1" class="button" href="#" onclick="quit(); return false;" style="left:10px; top:296px; position:absolute;">QUIT</a>
+            <a id="retry1" class="button" href="#" onclick="retry(); return false;" style="right:10px; top:296px; position:absolute;">RETRY</a>
+        </div>
+        
+        <div id="complete" class="popupContent" style="display:none;">
+            <p id="finishBest" style="text-align:center; margin-top:60px; color:#BBCCF1; font-size:110%; border-bottom:1px solid #999999; border-top:1px solid #999999;">Level Best: 01000 by Dan</p>
+            <p id="finishHeading" style="text-align:center; font-size:26px; color:#ffffff; font-family:Arial; top:100px; position:absolute; width:320px;"></p>
+            <div id="table">
+                <div id="row1" class="row">
+                    <div class="label">Questions Answered:</div>
+                    <div id="statQAnswered" class="value">2</div>
+                </div>
+                <div id="row2" class="row">
+                    <div class="label">Questions Score:</div>
+                    <div id="statQScore" class="value">000000</div>
+                </div>
+                <div id="row3" class="row">
+                    <div class="label">Time Bonus:</div>
+                    <div id="statTime" class="value">000000</div>
+                </div>
+                <div id="row4" class="row" style="border-top:1px solid #888888; padding-top:10px;">
+                    <div class="label" style="font-weight:bold; font-size:120%;">Total Score:</div>
+                    <div id="statTotal" class="value" style="color:#ffff00; font-size:120%;">000000</div>
+                </div>
+                <div class="row" style="width:320px; margin-left:0px;">
+                    <p id="finishLogin" style="text-align:center; margin-top:5px; color:#22b022; font-size:120%;"></p>
+                </div>
+            </div>
+            
+            <a id="quit2" class="button" href="#" onclick="quit(); return false;" style="left:10px; top:336px; position:absolute;">QUIT</a>
+            <a id="continue1" class="button" href="#" onclick="continueToLevSelect(); return false;" style="right:10px; top:336px; position:absolute;">CONTINUE</a>
+        </div>
+    </div>
+
+    <style>#splash { background:#ffffff; width:320px; height:460px; }#splash a { text-decoration:none; }#splash a:hover { text-decoration:none; }#splash .logo { display:block; font-family:Arial; font-size:22px; font-weight:bold; text-align:center; color:#222222; padding-top:150px; }#splash .free { font-family:Arial; font-size:12px; color:#666666; text-align:center; }#splash #loadingProgress { font-family:Arial; font-size:16px; font-weight:bold; color:#ef1010; text-align:center; margin-top:50px; width:100%;}</style><div id="splash" style="opacity: 1; display: none;"><a href="http://www.snappygames.com/" class="logo">SnappyGames.com</a><div class="free">Free Mobile Games</div><div id="loadingProgress">Loading 100%</div></div>
+
+    </div><input id="hidmobile" value="1" type="hidden">
+
+    <input id="hidun" value="" type="hidden">
+    <input id="instanceid" value="" type="hidden">
+    <input id="baseurl" value="http://www.magicappstore.com/" type="hidden">
+    <script type="text/javascript">
+        run();
+
+        
+    </script>
+
+
+	
+
+</body></html>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[商铺名称]]></Title>
+     <Description><![CDATA[<h1 style="text-align: center">
+ ABC内容编辑</h1>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/1.png]]></PicUrl>
+     <Url><![CDATA[http://udoo123.taobao.com]]></Url>
+ </NewsMsgData> 
+</weiweixinnet>

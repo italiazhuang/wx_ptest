@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[新图文消息00]]></Title>
+     <Description><![CDATA[<p>内容描述</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/3.png]]></PicUrl>
+     <Url></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[新图文消息01]]></Title>
+     <Description><![CDATA[<p>内容描述</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/2.png]]></PicUrl>
+     <Url></Url>
+ </NewsMsgData> 
+</weiweixinnet>

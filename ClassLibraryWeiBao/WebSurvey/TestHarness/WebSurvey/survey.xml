@@ -1,0 +1,9 @@
+<?xml version = "1.0"?>
+
+<WebSurvey redirecturl = "websurvey.aspx" allowrepeats = "false" cookiename = "sstchur:Survey1">
+  <Group id = "grp_PersonalInfo" nextimage = "finish.gif">
+    <Question id = "Name" type = "shortans" cols = "40" required = "true">
+      <Statement>Please enter your first name:</Statement>
+    </Question>
+  </Group>
+</WebSurvey>

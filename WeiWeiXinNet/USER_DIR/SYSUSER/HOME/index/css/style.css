@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, form{
+	font-family: ËÎÌו;
+}
+a{
+	color:#24adef;
+	text-decoration:none;
+}
+.navigation {
+	BACKGROUND-IMAGE: url(../images/nav/nav-bg.png); Z-INDEX: 9999; POSITION: fixed !important; WIDTH: 102%; Bottom: 0px; PADDING-RIGHT: 14px; DISPLAY: block; BACKGROUND-REPEAT: repeat-x; HEIGHT: 49px; MARGIN-LEFT: -10px
+}
+.navigation a{
+	width:20%;
+	float:left;
+	color:#fff;
+	text-decoration:none;
+	text-align:center;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-family: ËÎÌו,Helvetica, Tahoma, Arial, Microsoft YaHei, sans-serif;
+}
+
+.under-icon-text{
+	margin-top:-5px;
+	font-family:ËÎÌו;
+	display:block;
+	font-size:12px;
+	line-height:18px;
+	font-style:normal;
+}
+.selected{
+	background-color:rgba(255,255,255,0.1);
+}
+.mainBox{margin-bottom:60px}
+ul{padding:3px;}
+ul.round {
+text-align: left;
+font-size: 14px;
+line-height: 24px;
+background-color: #FFF;
+border-radius: 5px;
+box-shadow: 0 1px 3px rgba(0,0,0, 0.5);
+margin-bottom: 11px;
+display: block;
+color:#666666;
+}

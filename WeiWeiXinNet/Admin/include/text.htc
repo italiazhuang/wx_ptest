@@ -1,0 +1,37 @@
+<PUBLIC:COMPONENT>
+<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="Over()" />
+<PUBLIC:ATTACH EVENT="onmouseout" ONEVENT="Out()" />
+<PUBLIC:ATTACH EVENT="onblur" ONEVENT="Blur()" />
+<PUBLIC:ATTACH EVENT="onfocus" ONEVENT="Focus()" />
+ 
+</PUBLIC:COMPONENT>
+<SCRIPT LANGUAGE="Javascript">
+<!--
+var IsFocus=false;
+var e=element;
+function Over()
+{
+if(!IsFocus && e.readOnly==false && e.disabled==false)	
+e.style.border="1 solid #ACB7D7";
+}
+
+function Focus()
+{
+	if(e.readOnly==false && e.disabled==false)
+	{
+	IsFocus=true;	
+	e.style.border="1 solid #335EA8";
+	}
+}
+function Blur()
+{
+	IsFocus=false;	
+	e.style.border="1 solid #DDDDDD";
+}
+function Out()
+{
+	if(!IsFocus)
+	e.style.border="1 solid #DDDDDD";
+}
+-->
+</SCRIPT>

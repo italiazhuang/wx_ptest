@@ -1,0 +1,89 @@
+﻿<!--/*
+ *    WeWeiXin.NET 
+ *
+ *    论坛：http://tieba.baidu.com/f?kw=微微信_net
+ *    更新：udoo123.taobao.com
+ *    作者：http://blog.csdn.net/weixin_net
+ *    QQ群：172036441
+ *    授权：个人或公司运营自身微信公众号使用和二次开发自由使用，或者针对特定的单个用户进行二次开发自由使用，禁止重新包装后批量转卖
+ */-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QrCode二维码生成</title>
+    <link href="include/admin.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		function generate() {
+			var t = document.getElementById('t').value;
+			var e = document.getElementById('e').value;
+			var q = document.getElementById('q').value;
+			var s = document.getElementById('s').value;
+			var image = document.getElementById('result');
+			image.src = '../admin/QrCodeHandler.ashx?e=' + e + '&q=' + q + '&s=' + s + '&t=' + encodeURI(t);
+			image.alt = image.title = t;
+			return false;
+		}
+	</script>
+    <style type="text/css">
+        #e
+        {
+            width: 144px;
+        }
+        .style1
+        {
+            width: 453px;
+        }
+        .style3
+        {
+            width: 138px;
+        }
+    </style>
+</head>
+<body>
+<div class="main-box">
+	<div class="head-dark-box">
+		二维码推广：QrCode二维码生成将输入的URL生成二维码
+	</div>
+	<div class="body-box">
+	<div class="white-box">
+  <table width ="90%"> 
+   <tr>  <td class="style3"  >   
+						<label   for="t">输入URL地址</label></td> 
+                         <td>   
+						<input type="text" id="t" placeholder="请输入一个URL" value="http://www.csdn.net/article/2014-04-21/2819406-user-experience-is-the-new-differentiator-how-will-that-affect-the-internet"></td>      <td>   
+						<label for="q">空白区</label></td> 
+
+
+       <td class="style1"><select id="q" 
+               name="D2">
+								<option value="Zero">Zero</option>
+								<option value="Two" selected="selected">Two</option>
+								<option value="Four">Four</option>
+							</select></td>              </tr>
+     <tr>  <td class="style3" >   
+						<label class="control-label" for="e">容错等级</label></td>  <td>   
+						<select id="e" 
+             name="D1">
+								<option value="L">Low</option>
+								<option value="M" selected="selected">Medium</option>
+								<option value="Q">Quartile</option>
+								<option value="H">High</option>
+							</select></td> <td>   
+						<label  for="s">尺寸</label></td> 
+         <td ><select id="s" 
+                 name="D3">
+								<option value="4">4</option>
+								<option value="8" selected="selected">8</option>
+								<option value="12" >12</option>
+							</select></td> </tr> 
+      <tr>  <td class="style3"  >   
+							<a onclick="return generate()" class="btn" style="background-color: #C0C0C0; border-style: dashed; border-width: thin">点击生成二维码图像</a>   </td>  <td>   
+              用户手机扫描二维码后即可自动获得URL数据</td> <td></td> <td class="style1"></td> </tr>
+       <tr>  <td colspan="4">   
+				<img id="result"/></td>  </tr> 
+      </table>
+      </div>
+      </div>
+    </div>
+</body>
+</html>

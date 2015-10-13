@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WeiWeiXinNet.admin
+{
+    public partial class Turntable : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            if (IsPostBack)
+                return;
+
+            try
+            {
+                string PathDataBase1 = System.IO.Path.Combine(Server.MapPath("~"), "USER_DIR\\SYSUSER\\Turntable\\JiangPing.dll");//"USER_DIR\\SYSUSER\\SYSSET\\" +
+                TextBox1.Text = System.IO.File.ReadAllText(PathDataBase1, System.Text.Encoding.UTF8);
+                string PathDataBase2 = System.IO.Path.Combine(Server.MapPath("~"), "USER_DIR\\SYSUSER\\Turntable\\set.dll");//"USER_DIR\\SYSUSER\\SYSSET\\" +
+                txt2.Text = System.IO.File.ReadAllText(PathDataBase2, System.Text.Encoding.UTF8);
+            }
+            catch
+            { }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            string PathDataBase1 = System.IO.Path.Combine(Server.MapPath("~"), "USER_DIR\\SYSUSER\\Turntable\\JiangPing.dll");//"USER_DIR\\SYSUSER\\SYSSET\\" +
+
+            System.IO.File.WriteAllText(PathDataBase1, TextBox1.Text, System.Text.Encoding.UTF8);
+
+            string PathDataBase2 = System.IO.Path.Combine(Server.MapPath("~"), "USER_DIR\\SYSUSER\\Turntable\\set.dll");//"USER_DIR\\SYSUSER\\SYSSET\\" +
+
+            System.IO.File.WriteAllText(PathDataBase2, txt2.Text, System.Text.Encoding.UTF8);
+
+            Label1.Text = DateTime.Now.ToShortTimeString() + " 保存成功！";
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            GridView1.DataBind();
+            Panel2.Visible = false;
+            Panel1.Visible = true ;
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Panel1.Visible = false;
+            Panel2.Visible = true;
+        }
+    }
+}

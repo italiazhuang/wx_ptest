@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[刮刮卡]]></Title>
+     <Description><![CDATA[<p>内容编辑</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/ggk.png]]></PicUrl>
+     <Url><![CDATA[LotteryTicket/LotteryTicket.aspx?id=<%ID%>]]></Url>
+ </NewsMsgData> 
+</weiweixinnet>

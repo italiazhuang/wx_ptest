@@ -1,0 +1,10 @@
+
+CREATE TABLE [dbo].[WX_GGK_JP](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](200) NULL,
+	[Jp] [nvarchar](50) NULL,
+	[SJH] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+

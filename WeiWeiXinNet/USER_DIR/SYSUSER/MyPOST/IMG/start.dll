@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[欢迎使用]]></Title>
+     <Description><![CDATA[<p>内容<span style="font-size: 72px">编辑</span></p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/1.png]]></PicUrl>
+     <Url><![CDATA[web.aspx?id=<%ID%>]]></Url>
+ </NewsMsgData> 
+</weiweixinnet>

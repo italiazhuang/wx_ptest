@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[项目 0 标题]]></Title>
+     <Description><![CDATA[<h1>
+ 项目 0<span style="color: #daa520"> 具体内</span>容描述</h1>
+]]></Description>
+     <PicUrl><![CDATA[http://speaklanguages.cachefly.net/images/english/speak_english.gif ]]></PicUrl>
+     <Url><![CDATA[http://www.google.com]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[新图文消息00]]></Title>
+     <Description><![CDATA[<h2 style="font-style: italic;"><strong>内</strong>容<span class="marker">描述</span>&nbsp; 00</h2>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/1.png]]></PicUrl>
+     <Url></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[新图文消息01]]></Title>
+     <Description><![CDATA[内容描述]]></Description>
+     <PicUrl></PicUrl>
+     <Url></Url>
+ </NewsMsgData> 
+</weiweixinnet>

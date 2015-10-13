@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[数据测试]]></Title>
+     <Description><![CDATA[<h1>
+ <span style="color: #000080">内</span>容<span style="background-color: #daa520">编辑 测试</span></h1>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/1.png]]></PicUrl>
+     <Url></Url>
+ </NewsMsgData> 
+</weiweixinnet>

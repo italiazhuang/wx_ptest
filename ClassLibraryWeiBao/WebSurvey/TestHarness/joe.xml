@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebSurvey redirecturl="tm-pci-self-assessment-2007-thankyou.aspx" allowrepeats="false" cookiename="WS:TMPCISurveyResult">
+	<Group id="grp_Intro" backimage="back.gif" nextimage="next.gif">
+		<Separator>
+			<h3>How to Complete the Questionnaire</h3>
+			<p>Dear Credit Card taking department,</p>
+			<p>The questionnaire is divided into 6 sections focusing on a specific area of security, 
+      based on the requirements included in the PCI Data Security Standard. For any questions 
+      where N/A is marked, a brief explanation should be included at the end of the section.</p>
+			<p>If ANY questions answered with "no", your unit is not considered compliant. To reach compliance, 
+      the risk(s) must be resolved and the self-assessment must be retaken to demonstrate compliance.</p>
+			<p>You will need to complete the questionnaire in its entirety. Please plan enough time to complete in one sitting.</p>
+			<p>Sincerely,<br />The Treasury Management Team</p>
+			<p>To get started with the survey, please click the Next button.</p>
+		</Separator>
+	</Group>
+	<Group id="grp_ReportingUnit" backimage="back.gif" nextimage="next.gif">
+		<Separator>
+			<h3>Questionnaire Reporting</h3>
+			<h4>Organization Information</h4>
+		</Separator>
+		<Question id="CORPORATE_NAME" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>CORPORATE NAME:</b>
+			</Statement>
+		</Question>
+		<Question id="CONTACT_NAME" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>CONTACT NAME:</b>
+			</Statement>
+		</Question>
+		<Question id="TITLE" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>TITLE:</b>
+			</Statement>
+		</Question>
+		<Question id="PHONE" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>PHONE:</b>
+			</Statement>
+		</Question>
+		<Question id="E-MAIL" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>E-MAIL:</b>
+			</Statement>
+		</Question>
+		<Question id="DBA(S)" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>DBA(S):</b>
+			</Statement>
+		</Question>
+		<Question id="NUM_TRANSX" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>Approximate number of transactions/accounts handled per year:</b>
+			</Statement>
+		</Question>
+		<Question id="Biz_Desc" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please include a brief description of your business. Please explain your business' role in the payment flow. 
+        How and in what capacity does your business store, process and/or transmit cardholder data?</b>
+			</Statement>
+		</Question>
+		<Separator>
+			<h4>List all Third Party Service Providers</h4>
+		</Separator>
+		<Question id="Processor" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>Processor:</b>
+			</Statement>
+		</Question>
+		<Question id="Gateway" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>Gateway:</b>
+			</Statement>
+		</Question>
+		<Question id="WebHosting" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>Web Hosting:</b>
+			</Statement>
+		</Question>
+		<Question id="ShoppingCart" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>Shopping Cart:</b>
+			</Statement>
+		</Question>
+		<Question id="CoLocation" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>Co-Location:</b>
+			</Statement>
+		</Question>
+		<Question id="Other)" type="shortans" cols="60" required="false">
+			<Statement>
+				<b>Other:</b>
+			</Statement>
+		</Question>
+		<Question id="POS_Software" type="shortans" cols="60" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>List Point of Sale (POS) software/hardware in use:</b>
+			</Statement>
+		</Question>
+	</Group>
+	<Group id="grp_SecureNetwork" backimage="back.gif" nextimage="next.gif">
+		<Separator>
+			<h3>Build and Maintain a Secure Network</h3>
+			<h4>Requirement 1: Install and maintain a firewall configuration to protect data</h4>
+		</Separator>
+		<Question id="1.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.1) Are all router, switches, wireless access points, and firewall configurations secured and do they conform to documented security standards?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="1.2" type="mcss" basecontrol="radio" layout="horizontal" required="false">
+			<Statement>
+				<b>1.2) If wireless technology is used, is the access to the network limited to authorized devices?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="1.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.3) Are you familiar with the services we provide?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="1.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.4) Are you in a supervisory position?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="1.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.5) Have you asked us in the past to process deposit corrections for you?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="1.6" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.6) Have you asked us for assistance in PeopleSoft data entry or deposit processing?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="1.7" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.7) Was it easy to find our contact information?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="1.8" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.8) What was the source of the contact information?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="1.9" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.9) How fast was our response time by answering your phone call or returning your message/email inquiry?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="1.10" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>1.10) How polite was our staff in responding to your email/phone inquiry?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="1.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+		<Separator>
+			<h4>Requirement 2: Do not use vendor-supplied defaults for system passwords and other security parameters</h4>
+		</Separator>
+		<Question id="2.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>2.1) Are vendor default security settings changed on production systems before taking the system into production?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="2.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>2.2) Are vendor default accounts and passwords disabled or changed on production systems before putting a system into production?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="2.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>2.3) If wireless technology is used, are vendor default settings changed (i.e. WEP keys, SSID, passwords, SNMP community strings, disabling SSID broadcasts)?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="2.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>2.4) If wireless technology is used, is Wi-Fi Protected Access (WPA) technology implemented for encryption and authentication when WPA-capable?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="2.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>2.5) Are all production systems (servers and network components) hardened by removing all unnecessary services and protocols installed by the default configuration?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="2.6" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>2.6) Are secure, encrypted communications used for remote administration of production systems and applications?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="2.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+	</Group>
+	<Group id="grp_ProtectCardholderData" backimage="back.gif" nextimage="next.gif">
+		<Separator>
+			<h3>Protect Cardholder Data</h3>
+			<h4>Requirement 3: Protect stored data</h4>
+		</Separator>
+		<Question id="3.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>3.1) Is sensitive cardholder data securely disposed of when no longer needed?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="3.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>3.2) Is it prohibited to store the full contents of any track from the magnetic stripe (on the back of the card, in a chip, etc.) in the database, log files, or point-of-sale products?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="3.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>3.3) Is it prohibited to store the card-validation code (three-digit value printed on the signature panel of a card) in the database, log files, or point-of-sale products?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="3.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>3.4) Are all but the last four digits of the account number masked when displaying cardholder data?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="3.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>3.5) Are account numbers (in databases, logs, files, backup media, etc.) stored securely - for example, by means of encryption or truncation?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="3.6" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>3.6) Are account numbers sanitized before being logged in the audit log?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="3.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+		<Separator>
+			<h4>Requirement 4: Encrypt transmission of cardholder data and sensitive information across public networks</h4>
+		</Separator>
+		<Question id="4.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>4.1) Are transmissions of sensitive cardholder data encrypted over public networks through the use of SSL or other industry acceptable methods?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="4.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>4.2) If SSL is used for transmission of sensitive cardholder data, is it using version 3.0 with 128-bit encryption?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="4.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>4.3) If wireless technology is used, is the communication encrypted using Wi-Fi Protected Access (WPA), VPN, SSL at 128-bit, or WEP?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="4.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>4.4) If wireless technology is used, are WEP at 128-bit and additional encryption technologies in use, and are shared WEP keys rotated quarterly?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="4.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>4.5) Is encryption used in the transmission of account numbers via e-mail?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="4.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+	</Group>
+	<Group id="grp_VulnerabilityManagement" backimage="back.gif" nextimage="next.gif">
+		<Separator>
+			<h3>Maintain a Vulnerability Management Program</h3>
+			<h4>Requirement 5: Use and regularly update anti-virus software</h4>
+		</Separator>
+		<Question id="5.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>5.1) Is there a virus scanner installed on all servers and on all workstations, and is the virus scanner regularly updated?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="5.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+		<Separator>
+			<h4>Requirement 6: Develop and maintain secure systems and applications</h4>
+		</Separator>
+		<Question id="6.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>6.1) Are development, testing, and production systems updated with the latest security-related patches released by the vendors?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="6.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>6.2) Is the software and application development process based on an industry best practice and is information security included throughout the software development life cycle (SDLC) process?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="6.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>6.3) If production data is used for testing and development purposes, is sensitive cardholder data sanitized before usage?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="6.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>6.4) Are all changes to the production environment and applications formally authorized, planned, and logged before being implemented? </b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="6.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>6.5) Were the guidelines commonly accepted by the security community (such as Open Web Application Security Project group (www.owasp.org)) taken into account in the development of Web applications?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="6.6" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>6.6) When authenticating over the Internet, is the application designed to prevent malicious users from trying to determine existing user accounts?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="6.7" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>6.7) Is sensitive cardholder data stored in cookies secured or encrypted?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="6.8" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>6.8) Are controls implemented on the server side to prevent SQL injection and other bypassing of client side-input controls?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="6.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+	</Group>
+	<Group id="grp_AccessControl" backimage="back.gif" nextimage="next.gif">
+		<Separator>
+			<h3>Implement Strong Access Control Measures</h3>
+			<h4>Requirement 7: Restrict access to data by business need-to-know</h4>
+		</Separator>
+		<Question id="7.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>7.1) Is access to payment card account numbers restricted for users on a need-to-know basis?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="7.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+		<Separator>
+			<h4>Requirement 8: Assign a unique ID to each person with computer access</h4>
+		</Separator>
+		<Question id="8.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.1) Are all users required to authenticate using, at a minimum, a unique username and password?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.2) If employees, administrators, or third parties access the network remotely, is remote access software (such as PCAnywhere, 
+dial-in, or VPN) configured with a unique username and password and with encryption and other security features 
+turned on?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="8.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.3) Are all passwords on network devices and systems encrypted?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.41) When an employee leaves the company, are that employee's user accounts and passwords immediately revoked? </b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.5) Are all user accounts reviewed on a regular basis to ensure that malicious, out-of-date, or unknown accounts do not exist?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.6" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.6) Are non-consumer accounts that are not used for a lengthy amount of time (inactive accounts) automatically disabled in the system after a pre-defined period?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.7" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.7) Are accounts used by vendors for remote maintenance enabled only during the time needed?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="8.8" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.8) Are group, shared, or generic accounts and passwords prohibited for non-consumer users?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.9" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.9) Are non-consumer users required to change their passwords on a pre-defined regular basis?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.10" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.10) Is there a password policy for non-consumer users that enforces the use of strong passwords and prevents the resubmission of previously used passwords?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.11" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>8.11) Is there an account-lockout mechanism that blocks a malicious user from obtaining access to an account by multiple password retries or brute force?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="8.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+		<Separator>
+			<h4>Requirement 9: Restrict physical access to cardholder data</h4>
+		</Separator>
+		<Question id="9.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>9.1) Are there multiple physical security controls (such as badges, escorts, or mantraps) in place that would prevent unauthorized individuals from gaining access to the facility?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="9.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>9.2) If wireless technology is used, do you restrict access to wireless access points, wireless gateways, and wireless handheld devices?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="9.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>9.3) Are equipment (such as servers, workstations, laptops, and hard drives) and media containing cardholder data physically protected against unauthorized access?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="9.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>9.4) Is all cardholder data printed on paper or received by fax protected against unauthorized access?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="9.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>9.5) Are procedures in place to handle secure distribution and disposal of backup media and other media containing sensitive cardholder data? </b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="9.6" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>9.6) Are all media devices that store cardholder data properly inventoried and securely stored?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="9.7" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>9.7) Is cardholder data deleted or destroyed before it is physically disposed (for example, by shredding papers or degaussing backup media)?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="9.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+	</Group>
+	<Group id="grp_MonitorTest" backimage="back.gif" nextimage="next.gif">
+		<Separator>
+			<h3>Regularly Monitor and Test Networks</h3>
+			<h4>Requirement 10: Track and monitor all access to network resources and cardholder data</h4>
+		</Separator>
+		<Question id="10.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>10.1) Is all access to cardholder data, including root/administration access, logged?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="10.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>10.2) Do access control logs contain successful and unsuccessful login attempts and access to audit logs?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="10.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>10.3) Are all critical system clocks and times synchronized, and do logs include date and time stamp? </b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="10.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>10.4) Are the firewall, router, wireless access points, and authentication server logs regularly reviewed for unauthorized traffic?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="10.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>10.5) Are audit logs regularly backed up, secured, and retained for at least three months online and one-year offline for all critical systems?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="10.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+		<Separator>
+			<h4>Requirement 11: Regularly test security systems and processes</h4>
+		</Separator>
+		<Question id="11.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>11.1) If wireless technology is used, is a wireless analyzer periodically run to identify all wireless devices?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+				<Response>N/A</Response>
+			</Responses>
+		</Question>
+		<Question id="11.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>11.2) Is a vulnerability scan or penetration test performed on all Internet-facing applications and systems before they go into production?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="11.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>11.3) Is a intrusion detection or intrusion prevention system used on the network?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="11.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>11.4) Are security alerts from the intrusion detection or intrusion prevention system (IDS/IPS) continuously monitored, and are the latest IDS/IPS signatures installed?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="11.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+	</Group>
+	<Group id="grp_MaintainPolicy" backimage="back.gif" nextimage="finish.gif">
+		<Separator>
+			<h3>Maintain a policy that addresses information security</h3>
+			<h4>Requirement 12: Maintain a policy that addresses information security</h4>
+		</Separator>
+		<Question id="12.1" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.1) Are information security policies, including policies for access control, application and system development, operational, network and physical security, formally documented?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.2" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.2) Are information security policies and other relevant security information disseminated to all system users (including vendors, contractors, and business partners)?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.3" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.3) Are information security policies reviewed at least once a year and updated as needed?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.4" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.4) Have the roles and responsibilities for information security been clearly defined within the company?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.5" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.5) Is there an up-to-date information security awareness and training program in place for all system users?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.6" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.6) Are employees required to sign an agreement verifying they have read and understood the security policies and procedures?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.7" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.7) Is a background investigation (such as a credit- and criminal-record check, within the limits of local law) performed on all employees with access to account numbers?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.8" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.8) Are all third parties with access to sensitive cardholder data contractually obligated to comply with card association security standards?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.9" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.9) Is a security incident response plan formally documented and disseminated to the appropriate responsible parties?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.10" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.10) Are security incidents reported to the person responsible for security investigation? </b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.11" type="mcss" basecontrol="radio" layout="horizontal" required="true" requiredtext="[answer required]">
+			<Statement>
+				<b>12.11) Is there an incident response team ready to be deployed in case of a cardholder data compromise?</b>
+			</Statement>
+			<Responses>
+				<Response>Yes</Response>
+				<Response>No</Response>
+			</Responses>
+		</Question>
+		<Question id="12.NA" type="essay" cols="60" rows="4" required="false">
+			<Statement>
+				<b>Please provide any explanations for this section here. (For example, please clarify N/A responses.)</b>
+			</Statement>
+		</Question>
+	</Group>
+</WebSurvey>

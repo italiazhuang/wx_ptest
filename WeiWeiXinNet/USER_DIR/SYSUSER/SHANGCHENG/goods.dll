@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[商品03]]></Title>
+     <Description><![CDATA[10]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/ShangCheng/goods/img/KTV唱歌.png]]></PicUrl>
+     <Url><![CDATA[page3.htm]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[商品04牛肉]]></Title>
+     <Description><![CDATA[20]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/ShangCheng/goods/img/牛肉拉面.png]]></PicUrl>
+     <Url><![CDATA[page4.htm]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[商品06]]></Title>
+     <Description><![CDATA[10.00]]></Description>
+     <PicUrl></PicUrl>
+     <Url><![CDATA[page6.htm]]></Url>
+ </NewsMsgData> 
+</weiweixinnet>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[新图文消息04]]></Title>
+     <Description></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/1.png]]></PicUrl>
+     <Url><![CDATA[page4.htm]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[新图文消息06]]></Title>
+     <Description></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/game.png]]></PicUrl>
+     <Url><![CDATA[page6.htm]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[新图文消息07]]></Title>
+     <Description></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/536880034c317_b.jpg]]></PicUrl>
+     <Url><![CDATA[page7.htm]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[新图文消息08]]></Title>
+     <Description></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/2.png]]></PicUrl>
+     <Url><![CDATA[page8.htm]]></Url>
+ </NewsMsgData> 
+</weiweixinnet>

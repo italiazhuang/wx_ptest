@@ -1,0 +1,60 @@
+﻿<?xml version = "1.0"?>
+<WebSurvey redirecturl = "m2.aspx" allowrepeats = "false" cookiename = "WebSurvey">
+  <!-- Do not email results  -->
+  <!--<EmailResults>
+    <EmailTo>KenHackenberg@mail.maricopa.gov</EmailTo>
+    <SmtpServer>mailbox.maricopa.gov</SmtpServer>    
+  </EmailResults>-->
+
+  <Group id = "theOnlyGroup" nextimage = "finish.gif">
+
+    <Question id = "Fav_Color" type = "mcss" basecontrol = "radio" required = "true" requiredtext = "&#42; required field">
+      <Statement>
+        <b>What is your favorite color?</b>
+      </Statement>
+      <Responses>
+        <Response>Red</Response>
+        <Response>Blue</Response>
+        <Response>Green</Response>
+        <Response>Yellow</Response>
+      </Responses>
+    </Question>
+
+    <Question id = "Fav_Food" type = "mcss" basecontrol = "radio" required = "true" requiredtext = "&#42; required field">
+      <Statement>
+        <b>What is your favorite food?</b>
+      </Statement>
+      <Responses>
+        <Response>Steak</Response>
+        <Response>Shrimp</Response>
+        <Response>French Fries</Response>
+        <Response>Maryland Crab Soup</Response>
+      </Responses>
+    </Question>
+
+    <Question id = "Fav_Website" type = "mcss" basecontrol = "radio" required = "true" requiredtext = "&#42; required field">
+      <Statement>
+        <b>What is your favorite web site?</b>
+      </Statement>
+      <Responses>
+        <Response>4GuysFromRolla.Com</Response>
+        <Response>Asp.Net</Response>
+        <Response>Google.Com</Response>
+        <Response>ProjectMexico.org</Response>
+      </Responses>
+    </Question>
+
+    <Question id = "Rate_Survey" type = "mcss" basecontrol = "radio" layout = "horizontal" required = "true" requiredtext = "&#42; required field">
+      <Statement>
+        <b>Rate this survey on a scale of 1 to 5 (5 being the best)</b>
+      </Statement>
+      <Responses>
+        <Response>1</Response>
+        <Response>2</Response>
+        <Response>3</Response>
+        <Response>4</Response>
+        <Response>5</Response>
+      </Responses>
+    </Question>
+  </Group>
+</WebSurvey>

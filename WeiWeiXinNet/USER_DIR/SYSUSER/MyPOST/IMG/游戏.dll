@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[游戏]]></Title>
+     <Description><![CDATA[<p>游戏 内容描述 欢迎进入游戏频道</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/game.png]]></PicUrl>
+     <Url><![CDATA[Games/index.html]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[泡泡大战]]></Title>
+     <Description><![CDATA[<p>内容描述泡泡大战</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/01.png]]></PicUrl>
+     <Url><![CDATA[games/game1/index.html]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[简版华容道]]></Title>
+     <Description><![CDATA[<p>简版华容道</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/2.png]]></PicUrl>
+     <Url><![CDATA[games/game2/index.html]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[掌机游戏]]></Title>
+     <Description><![CDATA[<p>内容描述</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/3.png]]></PicUrl>
+     <Url><![CDATA[games/game3/index.html]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[奔跑的企鹅]]></Title>
+     <Description><![CDATA[<p>内容描述</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/4.png]]></PicUrl>
+     <Url><![CDATA[games/game4/index.html]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[飞机大战]]></Title>
+     <Description><![CDATA[<p>内容描述</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/5.png]]></PicUrl>
+     <Url><![CDATA[games/game5/index.html]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[简版开心农场]]></Title>
+     <Description><![CDATA[<p>内容描述</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/6.png]]></PicUrl>
+     <Url><![CDATA[games/game6/index.html]]></Url>
+ </NewsMsgData> 
+ <NewsMsgData>
+     <Title><![CDATA[计算器]]></Title>
+     <Description><![CDATA[<p>内容描述</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/8.png]]></PicUrl>
+     <Url><![CDATA[games/game8/index.html]]></Url>
+ </NewsMsgData> 
+</weiweixinnet>

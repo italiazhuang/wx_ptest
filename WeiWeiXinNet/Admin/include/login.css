@@ -1,0 +1,155 @@
+﻿/*  全局部分  */
+html{padding:0px}
+aspnetForm{padding:0px;margin:0px}
+form {
+	margin:0px;
+	padding:0px;
+}
+img {
+	border:0px;
+}
+input, select, textarea{
+	font-size:12px;
+}
+body {
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	font-family:verdana, sans-serif;
+	background:#EFF3FF;
+}
+body, table td, textarea{
+	font-size:12px;
+}
+
+/* 主体样式 */
+.aspnetForm{padding:0px;}
+.main-box {
+	background:#FFF;
+	border:1px solid #B5CFE7;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+.head-dark-box {
+	margin:2px;
+	padding:.5em 1em;
+	border-left:10px solid #0152AE;
+	background:#318ADE;
+	color:#FFF;
+	font-weight:bold;
+}
+.head-light-box {
+	margin:2px;
+	padding:.5em 1em;
+	background:#DEEFFF;
+	border-left:10px solid #B5D7F7;
+	font-weight:bold;
+}
+.body-box {
+	margin:2px;
+	padding:1em;
+	line-height:150%;
+	background:#F7FBFF;
+	color:#00309C;
+}
+.white-box {
+	margin:2px;
+	background:#FFF;
+}
+/* 表格样式 */
+.list-table {
+	width:100%;
+	border-top:2px solid #6BBAEF;
+	font-size:12px;
+	font-family:verdana, sans-serif;
+	color:#00309C;
+}
+.list-table td{
+	height:20px;
+	border-bottom:1px solid #C6E7FF;
+}
+
+/* 表单样式 */
+form div{
+	clear:left;
+	margin:8px;
+}
+form div.with-line{
+	padding-bottom:10px;
+	border-bottom:2px solid #6BBAEF;
+}
+form label.field{
+	float:left;
+	width:10%;
+	text-align:right; 
+	padding:4px;
+	margin-right:10px;
+}
+.fixwidth{
+	width:12em;
+	height:16px;
+}
+.button {
+	border:1px solid #B6B3AF;
+	padding:2px 12px;
+	_padding:1px 2px 0;
+	background:url(../images/buttonface.gif) repeat-x; 
+	height:24px;
+}
+
+/* 登录页面样式 */
+a:link{text-decoration:none;color:#000;}
+a:hovor{text-decoration:none;color:#000;}
+a:visited{text-decoration:none;color:#000;}
+#scope-box {
+	width:350px;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15%;
+}
+#form1 {
+	margin:2px;
+	padding-left:5em;
+	background:#fff url(../images/login.jpg) no-repeat 8% 8%;	
+}
+.border-box {
+	background:#FFF;
+	border:1px solid #0052B2;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+.head-dark-box {
+	margin:2px;
+	padding:.5em 1em;
+	border-left:10px solid #0052B2;
+	background:#3685D4;
+	color:#FFF;
+	font-weight:bold;
+}
+.fixlen{
+	width:8em;
+	height:16px;
+}
+.fixlen-yz{
+	width:3em;
+	height:16px;
+}
+.button {
+	border:1px solid #B6B3AF;
+	padding:2px 12px;
+	_padding:1px 2px 0;
+	background:url(../images/buttonface.gif) repeat-x; 
+	height:24px;
+}
+form label.field{
+	float:left;
+	width:18%;
+	text-align:right; 
+	margin-right:5px;
+}
+form div{
+	clear:left;
+	margin:5px 5px 5px 20px;
+}
+

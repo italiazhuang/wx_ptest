@@ -1,0 +1,87 @@
+<?xml version = "1.0"?>
+
+<WebSurvey redirecturl = "websurvey.aspx" allowrepeats = "false" cookiename = "WS:Survey1">
+  <Group id = "grp_Intro" nextimage = "next.gif">
+    <Separator>
+      <p>
+        <b>WebSurvey Introduction</b>
+      </p>
+
+      <p>
+        Thank you for taking the time to read my article on 4GuysFromRolla.Com.  The survey you are
+        viewing was created for demo purposes.  Hopefully, it will give you an idea of how flexible
+        the WebSurvey control is.
+      </p>
+
+      <p>
+        As you can see, this page contains no questions, it serves as nothing more than an Intro
+        or "filler" page.  You can place anything you want in this section, including HTML (as long
+        as it is well-formed with regards to XML.
+      </p>
+
+      <p>Ok, enough intro.  To get started with the survey, simply click the Next button.</p>
+    </Separator>
+  </Group>
+
+  <Group id = "grp_PersonalInfo" backimage = "back.gif" nextimage = "next.gif">
+    <Separator>
+      <b>Page 1 of 2: Personal Information</b>
+    </Separator>
+
+    <Question id = "FName" type = "shortans" cols = "30" required = "true">
+      <Statement>
+        <b>First Name:</b>
+      </Statement>
+    </Question>
+
+    <Question id = "LName" type = "shortans" cols = "30" required = "true">
+      <Statement>
+        <b>Last Name:</b>
+      </Statement>
+    </Question>
+
+    <Question id = "Email" type = "shortans" cols = "30" required = "true">
+      <Statement>
+        <b>Email Address:</b>
+      </Statement>
+    </Question>
+  </Group>
+
+  <Group id = "grp_Favorites" backimage = "back.gif" nextimage = "finish.gif">
+    <Separator>
+      <b>Page 2 of 2: Your Favorite Stuff</b>
+    </Separator>
+
+    <Question id = "FavColor" type = "mcss" layout = "vertical" required = "true">
+      <Statement>
+        <b>Favorite Color:</b>
+      </Statement>
+      <Responses>
+        <Response>Red</Response>
+        <Response>Blue</Response>
+        <Response>Green</Response>
+      </Responses>
+    </Question>
+
+    <Question id = "FavFoods" type = "mcms" required = "false">
+      <Statement>
+        <b>Favorite Foods (Ctrl + Click to Multiple Select):</b>
+      </Statement>
+      <Responses>
+        <Response>Green Eggs and Ham</Response>
+        <Response>Beer</Response>
+        <Response>Pizza</Response>
+        <Response>Sushi</Response>
+        <Response>Steak</Response>
+        <Response>Crabs</Response>
+      </Responses>
+    </Question>
+
+    <Question id = "Description" type = "essay" cols = "30" rows = "4" required = "false">
+      <Statement>
+        <b>Tell us about yourself:</b>
+      </Statement>
+    </Question>
+
+  </Group>
+</WebSurvey>

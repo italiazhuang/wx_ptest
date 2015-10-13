@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+ <NewsMsgData>
+     <Title><![CDATA[优惠劵]]></Title>
+     <Description><![CDATA[<p>优惠劵内容描述m</p>
+]]></Description>
+     <PicUrl><![CDATA[/USER_DIR/SYSUSER/IMG/Coupon.png]]></PicUrl>
+     <Url><![CDATA[Coupons/Coupons.aspx?id=<%ID%>]]></Url>
+ </NewsMsgData> 
+</weiweixinnet>

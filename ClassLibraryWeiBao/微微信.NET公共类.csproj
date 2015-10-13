@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76809D17-50B3-4828-AFCC-4117ABC02DA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>weiwei_lib</RootNamespace>
+    <AssemblyName>weiwei_lib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;NET40;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;CODE_ANALYSIS;NET40;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassImage.cs" />
+    <Compile Include="ClassServerCOM.cs" />
+    <Compile Include="ClassTimeEncryptionAlgorithm.cs" />
+    <Compile Include="ClassWeiWeiXin.cs" />
+    <Compile Include="json引擎1\Class1.cs" />
+    <Compile Include="json引擎1\IJsonWrapper.cs" />
+    <Compile Include="json引擎1\JsonData.cs" />
+    <Compile Include="json引擎1\JsonException.cs" />
+    <Compile Include="json引擎1\JsonMapper.cs" />
+    <Compile Include="json引擎1\JsonMockWrapper.cs" />
+    <Compile Include="json引擎1\JsonReader.cs" />
+    <Compile Include="json引擎1\JsonWriter.cs" />
+    <Compile Include="json引擎1\Lexer.cs" />
+    <Compile Include="json引擎1\ParserToken.cs" />
+    <Compile Include="json引擎2\Bson\BsonBinaryType.cs" />
+    <Compile Include="json引擎2\Bson\BsonBinaryWriter.cs" />
+    <Compile Include="json引擎2\Bson\BsonObjectId.cs" />
+    <Compile Include="json引擎2\Bson\BsonReader.cs" />
+    <Compile Include="json引擎2\Bson\BsonToken.cs" />
+    <Compile Include="json引擎2\Bson\BsonType.cs" />
+    <Compile Include="json引擎2\Bson\BsonWriter.cs" />
+    <Compile Include="json引擎2\ConstructorHandling.cs" />
+    <Compile Include="json引擎2\Converters\BinaryConverter.cs" />
+    <Compile Include="json引擎2\Converters\BsonObjectIdConverter.cs" />
+    <Compile Include="json引擎2\Converters\CustomCreationConverter.cs" />
+    <Compile Include="json引擎2\Converters\DataSetConverter.cs" />
+    <Compile Include="json引擎2\Converters\DataTableConverter.cs" />
+    <Compile Include="json引擎2\Converters\DateTimeConverterBase.cs" />
+    <Compile Include="json引擎2\Converters\EntityKeyMemberConverter.cs" />
+    <Compile Include="json引擎2\Converters\ExpandoObjectConverter.cs" />
+    <Compile Include="json引擎2\Converters\IsoDateTimeConverter.cs" />
+    <Compile Include="json引擎2\Converters\JavaScriptDateTimeConverter.cs" />
+    <Compile Include="json引擎2\Converters\KeyValuePairConverter.cs" />
+    <Compile Include="json引擎2\Converters\RegexConverter.cs" />
+    <Compile Include="json引擎2\Converters\StringEnumConverter.cs" />
+    <Compile Include="json引擎2\Converters\VersionConverter.cs" />
+    <Compile Include="json引擎2\Converters\XmlNodeConverter.cs" />
+    <Compile Include="json引擎2\DateFormatHandling.cs" />
+    <Compile Include="json引擎2\DateParseHandling.cs" />
+    <Compile Include="json引擎2\DateTimeZoneHandling.cs" />
+    <Compile Include="json引擎2\DefaultValueHandling.cs" />
+    <Compile Include="json引擎2\FloatFormatHandling.cs" />
+    <Compile Include="json引擎2\FloatParseHandling.cs" />
+    <Compile Include="json引擎2\Formatting.cs" />
+    <Compile Include="json引擎2\IJsonLineInfo.cs" />
+    <Compile Include="json引擎2\JsonArrayAttribute.cs" />
+    <Compile Include="json引擎2\JsonConstructorAttribute.cs" />
+    <Compile Include="json引擎2\JsonContainerAttribute.cs" />
+    <Compile Include="json引擎2\JsonConvert.cs" />
+    <Compile Include="json引擎2\JsonConverter.cs" />
+    <Compile Include="json引擎2\JsonConverterAttribute.cs" />
+    <Compile Include="json引擎2\JsonConverterCollection.cs" />
+    <Compile Include="json引擎2\JsonDictionaryAttribute.cs" />
+    <Compile Include="json引擎2\JsonException.cs" />
+    <Compile Include="json引擎2\JsonExtensionDataAttribute.cs" />
+    <Compile Include="json引擎2\JsonIgnoreAttribute.cs" />
+    <Compile Include="json引擎2\JsonObjectAttribute.cs" />
+    <Compile Include="json引擎2\JsonPosition.cs" />
+    <Compile Include="json引擎2\JsonPropertyAttribute.cs" />
+    <Compile Include="json引擎2\JsonReader.cs" />
+    <Compile Include="json引擎2\JsonReaderException.cs" />
+    <Compile Include="json引擎2\JsonSerializationException.cs" />
+    <Compile Include="json引擎2\JsonSerializer.cs" />
+    <Compile Include="json引擎2\JsonSerializerSettings.cs" />
+    <Compile Include="json引擎2\JsonTextReader.cs" />
+    <Compile Include="json引擎2\JsonTextWriter.cs" />
+    <Compile Include="json引擎2\JsonToken.cs" />
+    <Compile Include="json引擎2\JsonValidatingReader.cs" />
+    <Compile Include="json引擎2\JsonWriter.cs" />
+    <Compile Include="json引擎2\JsonWriterException.cs" />
+    <Compile Include="json引擎2\Linq\Extensions.cs" />
+    <Compile Include="json引擎2\Linq\IJEnumerable.cs" />
+    <Compile Include="json引擎2\Linq\JArray.cs" />
+    <Compile Include="json引擎2\Linq\JConstructor.cs" />
+    <Compile Include="json引擎2\Linq\JContainer.cs" />
+    <Compile Include="json引擎2\Linq\JEnumerable.cs" />
+    <Compile Include="json引擎2\Linq\JObject.cs" />
+    <Compile Include="json引擎2\Linq\JPath.cs" />
+    <Compile Include="json引擎2\Linq\JProperty.cs" />
+    <Compile Include="json引擎2\Linq\JPropertyDescriptor.cs" />
+    <Compile Include="json引擎2\Linq\JPropertyKeyedCollection.cs" />
+    <Compile Include="json引擎2\Linq\JRaw.cs" />
+    <Compile Include="json引擎2\Linq\JToken.cs" />
+    <Compile Include="json引擎2\Linq\JTokenEqualityComparer.cs" />
+    <Compile Include="json引擎2\Linq\JTokenReader.cs" />
+    <Compile Include="json引擎2\Linq\JTokenType.cs" />
+    <Compile Include="json引擎2\Linq\JTokenWriter.cs" />
+    <Compile Include="json引擎2\Linq\JValue.cs" />
+    <Compile Include="json引擎2\MemberSerialization.cs" />
+    <Compile Include="json引擎2\MissingMemberHandling.cs" />
+    <Compile Include="json引擎2\NullValueHandling.cs" />
+    <Compile Include="json引擎2\ObjectCreationHandling.cs" />
+    <Compile Include="json引擎2\PreserveReferencesHandling.cs" />
+    <Compile Include="json引擎2\ReferenceLoopHandling.cs" />
+    <Compile Include="json引擎2\Required.cs" />
+    <Compile Include="json引擎2\Schema\Extensions.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchema.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaBuilder.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaConstants.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaException.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaGenerator.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaModel.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaModelBuilder.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaNode.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaNodeCollection.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaResolver.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaType.cs" />
+    <Compile Include="json引擎2\Schema\JsonSchemaWriter.cs" />
+    <Compile Include="json引擎2\Schema\UndefinedSchemaIdHandling.cs" />
+    <Compile Include="json引擎2\Schema\ValidationEventArgs.cs" />
+    <Compile Include="json引擎2\Schema\ValidationEventHandler.cs" />
+    <Compile Include="json引擎2\Serialization\CachedAttributeGetter.cs" />
+    <Compile Include="json引擎2\Serialization\CamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="json引擎2\Serialization\DefaultContractResolver.cs" />
+    <Compile Include="json引擎2\Serialization\DefaultReferenceResolver.cs" />
+    <Compile Include="json引擎2\Serialization\DefaultSerializationBinder.cs" />
+    <Compile Include="json引擎2\Serialization\DiagnosticsTraceWriter.cs" />
+    <Compile Include="json引擎2\Serialization\DynamicValueProvider.cs" />
+    <Compile Include="json引擎2\Serialization\ErrorContext.cs" />
+    <Compile Include="json引擎2\Serialization\ErrorEventArgs.cs" />
+    <Compile Include="json引擎2\Serialization\ExpressionValueProvider.cs" />
+    <Compile Include="json引擎2\Serialization\IContractResolver.cs" />
+    <Compile Include="json引擎2\Serialization\IReferenceResolver.cs" />
+    <Compile Include="json引擎2\Serialization\ITraceWriter.cs" />
+    <Compile Include="json引擎2\Serialization\IValueProvider.cs" />
+    <Compile Include="json引擎2\Serialization\JsonArrayContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonContainerContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonDictionaryContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonDynamicContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonFormatterConverter.cs" />
+    <Compile Include="json引擎2\Serialization\JsonISerializableContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonLinqContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonObjectContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonPrimitiveContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonProperty.cs" />
+    <Compile Include="json引擎2\Serialization\JsonPropertyCollection.cs" />
+    <Compile Include="json引擎2\Serialization\JsonSerializerInternalBase.cs" />
+    <Compile Include="json引擎2\Serialization\JsonSerializerInternalReader.cs" />
+    <Compile Include="json引擎2\Serialization\JsonSerializerInternalWriter.cs" />
+    <Compile Include="json引擎2\Serialization\JsonSerializerProxy.cs" />
+    <Compile Include="json引擎2\Serialization\JsonStringContract.cs" />
+    <Compile Include="json引擎2\Serialization\JsonTypeReflector.cs" />
+    <Compile Include="json引擎2\Serialization\LateBoundMetadataTypeAttribute.cs" />
+    <Compile Include="json引擎2\Serialization\MemoryTraceWriter.cs" />
+    <Compile Include="json引擎2\Serialization\ObjectConstructor.cs" />
+    <Compile Include="json引擎2\Serialization\OnErrorAttribute.cs" />
+    <Compile Include="json引擎2\Serialization\ReflectionValueProvider.cs" />
+    <Compile Include="json引擎2\Serialization\TraceJsonReader.cs" />
+    <Compile Include="json引擎2\Serialization\TraceJsonWriter.cs" />
+    <Compile Include="json引擎2\StringEscapeHandling.cs" />
+    <Compile Include="json引擎2\TypeNameHandling.cs" />
+    <Compile Include="json引擎2\Utilities\Base64Encoder.cs" />
+    <Compile Include="json引擎2\Utilities\BidirectionalDictionary.cs" />
+    <Compile Include="json引擎2\Utilities\CollectionUtils.cs" />
+    <Compile Include="json引擎2\Utilities\CollectionWrapper.cs" />
+    <Compile Include="json引擎2\Utilities\ConvertUtils.cs" />
+    <Compile Include="json引擎2\Utilities\DateTimeParser.cs" />
+    <Compile Include="json引擎2\Utilities\DateTimeUtils.cs" />
+    <Compile Include="json引擎2\Utilities\DictionaryWrapper.cs" />
+    <Compile Include="json引擎2\Utilities\DynamicProxy.cs" />
+    <Compile Include="json引擎2\Utilities\DynamicProxyMetaObject.cs" />
+    <Compile Include="json引擎2\Utilities\DynamicReflectionDelegateFactory.cs" />
+    <Compile Include="json引擎2\Utilities\DynamicUtils.cs" />
+    <Compile Include="json引擎2\Utilities\DynamicWrapper.cs" />
+    <Compile Include="json引擎2\Utilities\EnumUtils.cs" />
+    <Compile Include="json引擎2\Utilities\EnumValue.cs" />
+    <Compile Include="json引擎2\Utilities\EnumValues.cs" />
+    <Compile Include="json引擎2\Utilities\ExpressionReflectionDelegateFactory.cs" />
+    <Compile Include="json引擎2\Utilities\ILGeneratorExtensions.cs" />
+    <Compile Include="json引擎2\Utilities\ImmutableCollectionsUtils.cs" />
+    <Compile Include="json引擎2\Utilities\JavaScriptUtils.cs" />
+    <Compile Include="json引擎2\Utilities\LateBoundReflectionDelegateFactory.cs" />
+    <Compile Include="json引擎2\Utilities\LinqBridge.cs" />
+    <Compile Include="json引擎2\Utilities\MathUtils.cs" />
+    <Compile Include="json引擎2\Utilities\MethodCall.cs" />
+    <Compile Include="json引擎2\Utilities\MiscellaneousUtils.cs" />
+    <Compile Include="json引擎2\Utilities\ReflectionDelegateFactory.cs" />
+    <Compile Include="json引擎2\Utilities\ReflectionUtils.cs" />
+    <Compile Include="json引擎2\Utilities\StringBuffer.cs" />
+    <Compile Include="json引擎2\Utilities\StringReference.cs" />
+    <Compile Include="json引擎2\Utilities\StringUtils.cs" />
+    <Compile Include="json引擎2\Utilities\ThreadSafeStore.cs" />
+    <Compile Include="json引擎2\Utilities\TypeExtensions.cs" />
+    <Compile Include="json引擎2\Utilities\ValidationUtils.cs" />
+    <Compile Include="json引擎2\WriteState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QR二维码\BitList.cs" />
+    <Compile Include="QR二维码\BitMatrix.cs" />
+    <Compile Include="QR二维码\common\BitListExtensions.cs" />
+    <Compile Include="QR二维码\common\ByteMatrix.cs" />
+    <Compile Include="QR二维码\common\ByteMatrixExtensions.cs" />
+    <Compile Include="QR二维码\DataEncodation\AlphanumericEncoder.cs" />
+    <Compile Include="QR二维码\DataEncodation\AlphanumericTable.cs" />
+    <Compile Include="QR二维码\DataEncodation\CharCountIndicatorTable.cs" />
+    <Compile Include="QR二维码\DataEncodation\DataEncode.cs" />
+    <Compile Include="QR二维码\DataEncodation\ECISet.cs" />
+    <Compile Include="QR二维码\DataEncodation\EightBitByteEncoder.cs" />
+    <Compile Include="QR二维码\DataEncodation\EncodationStruct.cs" />
+    <Compile Include="QR二维码\DataEncodation\EncoderBase.cs" />
+    <Compile Include="QR二维码\DataEncodation\InputRecognition\InputRecognise.cs" />
+    <Compile Include="QR二维码\DataEncodation\InputRecognition\ModeEncodeCheck.cs" />
+    <Compile Include="QR二维码\DataEncodation\InputRecognition\RecognitionStruct.cs" />
+    <Compile Include="QR二维码\DataEncodation\KanjiEncoder.cs" />
+    <Compile Include="QR二维码\DataEncodation\Mode.cs" />
+    <Compile Include="QR二维码\DataEncodation\NumericEncoder.cs" />
+    <Compile Include="QR二维码\EncodingRegion\BCHCalculator.cs" />
+    <Compile Include="QR二维码\EncodingRegion\Codeword.cs" />
+    <Compile Include="QR二维码\EncodingRegion\FormatInformation.cs" />
+    <Compile Include="QR二维码\EncodingRegion\VersionInformation.cs" />
+    <Compile Include="QR二维码\ErrorCorrectionLevel.cs" />
+    <Compile Include="QR二维码\ErrorCorrection\ECGenerator.cs" />
+    <Compile Include="QR二维码\Masking\MaskPatternType.cs" />
+    <Compile Include="QR二维码\Masking\MatrixExtensions.cs" />
+    <Compile Include="QR二维码\Masking\NullPattern.cs" />
+    <Compile Include="QR二维码\Masking\Pattern.cs" />
+    <Compile Include="QR二维码\Masking\Pattern0.cs" />
+    <Compile Include="QR二维码\Masking\Pattern1.cs" />
+    <Compile Include="QR二维码\Masking\Pattern2.cs" />
+    <Compile Include="QR二维码\Masking\Pattern3.cs" />
+    <Compile Include="QR二维码\Masking\Pattern4.cs" />
+    <Compile Include="QR二维码\Masking\Pattern5.cs" />
+    <Compile Include="QR二维码\Masking\Pattern6.cs" />
+    <Compile Include="QR二维码\Masking\Pattern7.cs" />
+    <Compile Include="QR二维码\Masking\PatternFactory.cs" />
+    <Compile Include="QR二维码\Masking\Scoring\MatrixScoreCalculator.cs" />
+    <Compile Include="QR二维码\Masking\Scoring\Penalty.cs" />
+    <Compile Include="QR二维码\Masking\Scoring\Penalty1.cs" />
+    <Compile Include="QR二维码\Masking\Scoring\Penalty2.cs" />
+    <Compile Include="QR二维码\Masking\Scoring\Penalty3.cs" />
+    <Compile Include="QR二维码\Masking\Scoring\Penalty4.cs" />
+    <Compile Include="QR二维码\Masking\Scoring\PenaltyFactory.cs" />
+    <Compile Include="QR二维码\Masking\Scoring\PenaltyRules.cs" />
+    <Compile Include="QR二维码\MatrixPoint.cs" />
+    <Compile Include="QR二维码\MatrixRectangle.cs" />
+    <Compile Include="QR二维码\MatrixSize.cs" />
+    <Compile Include="QR二维码\MatrixStatus.cs" />
+    <Compile Include="QR二维码\Positioning\PositioninngPatternBuilder.cs" />
+    <Compile Include="QR二维码\Positioning\Stencils\AlignmentPattern.cs" />
+    <Compile Include="QR二维码\Positioning\Stencils\DarkDotAtLeftBottom.cs" />
+    <Compile Include="QR二维码\Positioning\Stencils\PatternStencilBase.cs" />
+    <Compile Include="QR二维码\Positioning\Stencils\PositionDetectionPattern.cs" />
+    <Compile Include="QR二维码\Positioning\Stencils\TimingPattern.cs" />
+    <Compile Include="QR二维码\Positioning\TriStateMatrixExtensions.cs" />
+    <Compile Include="QR二维码\QrCode.cs" />
+    <Compile Include="QR二维码\QRCodeConstantVariable.cs" />
+    <Compile Include="QR二维码\QRCodeEncode.cs" />
+    <Compile Include="QR二维码\QrEncoder.cs" />
+    <Compile Include="QR二维码\ReedSolomon\GaloisField256.cs" />
+    <Compile Include="QR二维码\ReedSolomon\GeneratorPolynomial.cs" />
+    <Compile Include="QR二维码\ReedSolomon\PolyDivideStruct.cs" />
+    <Compile Include="QR二维码\ReedSolomon\Polynomial.cs" />
+    <Compile Include="QR二维码\ReedSolomon\ReedSolomonEncoder.cs" />
+    <Compile Include="QR二维码\SquareBitMatrix.cs" />
+    <Compile Include="QR二维码\StateMatrix.cs" />
+    <Compile Include="QR二维码\Terminate\Terminator.cs" />
+    <Compile Include="QR二维码\TriStateMatrix.cs" />
+    <Compile Include="QR二维码\VersionDetail.cs" />
+    <Compile Include="QR二维码\Versions\ErrorCorrectionBlock.cs" />
+    <Compile Include="QR二维码\Versions\ErrorCorrectionBlocks.cs" />
+    <Compile Include="QR二维码\Versions\InputOutOfBoundaryException.cs" />
+    <Compile Include="QR二维码\Versions\QRCodeVersion.cs" />
+    <Compile Include="QR二维码\Versions\VersionControl.cs" />
+    <Compile Include="QR二维码\Versions\VersionControlStruct.cs" />
+    <Compile Include="QR二维码\Versions\VersionTable.cs" />
+    <Compile Include="QR二维码\Windows\Forms\QrCodeGraphicControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QR二维码\Windows\Forms\QrCodeImgControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QR二维码\Windows\Render\ColorContrast.cs" />
+    <Compile Include="QR二维码\Windows\Render\DrawingBrushRenderer.cs" />
+    <Compile Include="QR二维码\Windows\Render\DrawingSize.cs" />
+    <Compile Include="QR二维码\Windows\Render\EncapsulatedPostScriptRenderer.cs" />
+    <Compile Include="QR二维码\Windows\Render\FixedCodeSize.cs" />
+    <Compile Include="QR二维码\Windows\Render\FixedModuleSize.cs" />
+    <Compile Include="QR二维码\Windows\Render\FormColor.cs" />
+    <Compile Include="QR二维码\Windows\Render\GColor.cs" />
+    <Compile Include="QR二维码\Windows\Render\GeometryExtensions.cs" />
+    <Compile Include="QR二维码\Windows\Render\GraphicsRenderer.cs" />
+    <Compile Include="QR二维码\Windows\Render\ImageFormatEnum.cs" />
+    <Compile Include="QR二维码\Windows\Render\ImageFormatExtension.cs" />
+    <Compile Include="QR二维码\Windows\Render\ISizeCalculation.cs" />
+    <Compile Include="QR二维码\Windows\Render\MediaColor.cs" />
+    <Compile Include="QR二维码\Windows\Render\QuietZoneModules.cs" />
+    <Compile Include="QR二维码\Windows\Render\StringBuilderExtension.cs" />
+    <Compile Include="QR二维码\Windows\Render\SVGRenderer.cs" />
+    <Compile Include="QR二维码\Windows\Render\WriteableBitmapExtension.cs" />
+    <Compile Include="QR二维码\Windows\Render\WriteableBitmapRenderer.cs" />
+    <Compile Include="QR二维码\Windows\WPF\QrCodeGeoControl.cs" />
+    <Compile Include="QR二维码\Windows\WPF\QrCodeImgControl.cs" />
+    <Compile Include="weiweixin\BasicResult.cs" />
+    <Compile Include="weiweixin\Credential.cs" />
+    <Compile Include="weiweixin\EntrySign.cs" />
+    <Compile Include="weiweixin\Exception.cs" />
+    <Compile Include="weiweixin\HttpHelper.cs" />
+    <Compile Include="weiweixin\IMessageHandler.cs" />
+    <Compile Include="weiweixin\MenuHelper.cs" />
+    <Compile Include="weiweixin\Message.cs" />
+    <Compile Include="weiweixin\MessageHelper.cs" />
+    <Compile Include="weiweixin\MessageType.cs" />
+    <Compile Include="weiweixin\ReceiveMessage.cs" />
+    <Compile Include="weiweixin\ReceiveMessageSub.cs" />
+    <Compile Include="weiweixin\RepMsgDataSub.cs" />
+    <Compile Include="weiweixin\ResponseMessage.cs" />
+    <Compile Include="weiweixin\ResponseMessageSub.cs" />
+    <Compile Include="weiweixin\SellerContext.cs" />
+    <Compile Include="weiweixin\SellerObtainer.cs" />
+    <Compile Include="weiweixin\UserContext.cs" />
+    <Compile Include="weixinlib\ClassSignture.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="QR二维码\themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

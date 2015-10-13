@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Answers>
+  <AnswerSet>
+    <Time>2014/5/5 7:28:53</Time>
+    <Answer questionId="Name">你好</Answer>
+  </AnswerSet>
+  <AnswerSet>
+    <Time>2014/5/5 10:30:10</Time>
+    <Answer questionId="Name">AA</Answer>
+  </AnswerSet>
+</Answers>

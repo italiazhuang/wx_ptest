@@ -1,0 +1,22 @@
+<?xml version = "1.0"?>
+<WebSurvey redirecturl = "colors.aspx" allowrepeats = "true" cookiename = "UPSLT:WSFBSurvey">
+
+  <!--<EmailResults>
+    <EmailTo>me@here.net</EmailTo>
+    <SmtpServer>some.smtpserver.com</SmtpServer>    
+  </EmailResults>-->
+  
+  <Group id = "grp" nextimage = "submit.gif">
+      
+    <Question id = "Fav_Color" type = "mcss" required = "true">
+      <Statement><b>What is your favorite color?</b></Statement>
+      <Responses>
+        <Response>Blue</Response>
+        <Response>Red</Response>
+        <Response>Green</Response>
+        <Response>Yellow</Response>
+      </Responses>
+    </Question>  
+  </Group>
+  
+</WebSurvey>

@@ -1,0 +1,1 @@
+<a onclick="topnews();"  href="#"> 微微信0.8欢迎使用 </a>

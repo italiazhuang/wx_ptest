@@ -1,0 +1,67 @@
+﻿ { 
+ "button":[  
+{ "name":"常用工具", 
+ "sub_button":[ 
+{	
+"type":"click",	
+ "name":"签到",	
+"key":"@"	
+ },
+{	
+"type":"click",	
+ "name":"听歌",	
+"key":"tg"	
+ },
+{	
+"type":"click",	
+ "name":"查看积分",	
+"key":"jf"	
+ },
+{	
+"type":"click",	
+ "name":"照片墙",	
+"key":"ft"	
+ },
+{	
+"type":"click",	
+ "name":"微墙",	
+"key":"wq"	
+ }
+]},
+{ "name":"网站", 
+ "sub_button":[ 
+{	
+"type":"view",	
+ "name":"技术支持",	
+"url":"http://tieba.baidu.com/f?kw=%CE%A2%CE%A2%D0%C5_net&fr=index"	
+ } 
+  ] },
+{ "name":"友情链接", 
+ "sub_button":[ 
+{	
+"type":"view",	
+ "name":"浙江大学",	
+"url":"http://www.zju.edu.cn"	
+ },
+{	
+"type":"view",	
+ "name":"微信源码",	
+"url":"http://udoo123.taobao.com"	
+ },
+{	
+"type":"view",	
+ "name":"CSDN",	
+"url":"http://www.csdn.net"	
+ },
+{	
+"type":"view",	
+ "name":"关于我们",	
+"url":"http://udoo123.taobao.com"	
+ },
+{	
+"type":"view",	
+ "name":"淘宝店",	
+"url":"http://udoo123.taobao.com"	
+ }]}
+             ] 
+ } 

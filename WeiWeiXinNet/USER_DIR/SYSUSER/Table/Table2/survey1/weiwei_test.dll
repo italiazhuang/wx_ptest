@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Answers>
+  <AnswerSet>
+    <Answer questionId="Name">asss</Answer>
+  </AnswerSet>
+  <AnswerSet>
+    <Answer questionId="Name">abc2</Answer>
+  </AnswerSet>
+  <AnswerSet>
+    <Answer questionId="Name">abcm2</Answer>
+  </AnswerSet>
+  <AnswerSet>
+    <Answer questionId="Name" time="2014/5/5 6:11:30">你好</Answer>
+  </AnswerSet>
+  <AnswerSet>
+    <Answer questionId="Name">OK</Answer>
+    <Time>2014/5/5 6:14:31</Time>
+  </AnswerSet>
+  <AnswerSet>
+    <Time>2014/5/5 6:16:00</Time>
+    <Answer questionId="Name">OKOK</Answer>
+  </AnswerSet>
+</Answers>

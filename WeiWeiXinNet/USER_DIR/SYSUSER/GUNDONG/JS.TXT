@@ -1,0 +1,1 @@
+function demo04x() {  jBox.open("iframe:USER_DIR/SYSUSER/GUNDONG/news.htm", "微信助手", $(window).width() * 0.9, $(window).height()*0.6);   }

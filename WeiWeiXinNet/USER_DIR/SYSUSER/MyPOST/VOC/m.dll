@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<weiweixinnet>
+   <MusicMsgData>
+      <Title>音乐标题</Title>
+      <Description>音乐描述</Description>
+      <MusicUrl>音乐URL</MusicUrl>
+      <HQMusicUrl>高品质音乐URL</HQMusicUrl>
+   </MusicMsgData> 
+</weiweixinnet>

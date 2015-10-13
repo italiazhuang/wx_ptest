@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>微微信.NET</title>
+<link href="Cmd/Styles/style.css" rel="stylesheet" type="text/css">
+<link id="skin" rel="stylesheet" href="Pink/jbox.css">
+<script type="text/javascript" src="USER_DIR/SYSUSER/HOME/MAIN_files/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="USER_DIR/SYSUSER/HOME/MAIN_files/jquery.jBox.src.js"></script>
+
+  <script language="javascript" type="text/javascript">
+        function onBridgeReady() {
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                WeixinJSBridge.call('hideOptionMenu');
+            });
+
+            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+                WeixinJSBridge.call('hideToolbar');
+            });
+
+        }
+
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+            }
+        } else {
+            onBridgeReady();
+        }
+
+    </script> 
+
+<script type="text/javascript">
+        var _jBoxConfig = {};
+        _jBoxConfig.defaults = {
+            id: null,
+            top: '1%',
+            border: 5,
+            opacity: 0.2,
+            timeout: 0,
+            showType: 'fade',
+            showSpeed: 'fast',
+            showIcon: true,
+            showClose: true,
+            draggable: true,
+            dragLimit: true,
+            dragClone: false,
+            persistent: true,
+            showScrolling: true,
+            ajaxData: {},
+            iframeScrolling: 'auto',
+
+            title: 'jBox',
+            width: 350,
+            height: 'auto',
+            bottomText: '',
+            buttons: { '确定': 'ok' },
+            buttonsFocus: 0,
+            loaded: function (h) { },
+            submit: function (v, h, f) { return true; },
+            closed: function () { }
+        };
+        _jBoxConfig.stateDefaults = {
+            content: '',
+            buttons: { '确定': 'ok' },
+            buttonsFocus: 0,
+            submit: function (v, h, f) { return true; }
+        };
+        _jBoxConfig.tipDefaults = {
+            content: '',
+            icon: 'info',
+            top: '40%',
+            width: 'auto',
+            height: 'auto',
+            opacity: 0,
+            timeout: 2000,
+            closed: function () { }
+        };
+        _jBoxConfig.messagerDefaults = {
+            content: '',
+            title: 'jBox',
+            icon: 'none',
+            width: 350,
+            height: 'auto',
+            timeout: 3000,
+            showType: 'slide',
+            showSpeed: 600,
+            border: 0,
+            buttons: {},
+            buttonsFocus: 0,
+            loaded: function (h) { },
+            submit: function (v, h, f) { return true; },
+            closed: function () { }
+        };
+        _jBoxConfig.languageDefaults = {
+            close: '关闭',
+            ok: '确定',
+            yes: '是',
+            no: '否',
+            cancel: '取消'
+        };
+
+        $.jBox.setDefaults(_jBoxConfig);
+
+
+
+        function dwd() {
+            // jBox.alert("Hello 微信助手");
+            jBox.alert("Hello 微信助手", '关于我们', { width: 300, height: 150 });
+        }
+
+
+        function d_qiandao() {
+            jBox.open("iframe:cmd/qiandao.aspx?id=D6A9F49694F47762A940EBEACC6DA28F5B2C2158E634F38C17E4DB802938DFDB415BA200A81FA1E5", "每日签到", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+        function d_diancan() {
+          jBox.open("iframe:cmd/shangcheng.aspx?id=D6A9F49694F47762A940EBEACC6DA28F5B2C2158E634F38C17E4DB802938DFDB415BA200A81FA1E5", "美食点餐", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+        function d_jifen() {
+            jBox.open("iframe:cmd/jifen.aspx?id=D6A9F49694F47762A940EBEACC6DA28F5B2C2158E634F38C17E4DB802938DFDB415BA200A81FA1E5", "我的积分", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+        function d_rengpingzi() {
+            jBox.open("iframe:cmd/shenghuo.aspx", "信息墙", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+        function d_shoupingzi() {
+            jBox.open("iframe:WebSurvey/m.aspx?t=/user_dir/sysuser/table/table1/survey1.dll", "我的表单", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+        function d_sixin() {
+            jBox.open("iframe:/user_dir/sysuser/pages/about.htm", "微信助手-关于本站", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+
+        function d_weixinqiang() {
+            jBox.open("iframe:cmd/weixinqiang.aspx?id=D6A9F49694F47762A940EBEACC6DA28F5B2C2158E634F38C17E4DB802938DFDB415BA200A81FA1E5", "微信助手-微信墙", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+
+        function d_xiaomeng() {
+            jBox.open("iframe:cmd/yijian.aspx", "意见箱", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+
+        function d_youxi() {
+            jBox.open("iframe:/user_dir/sysuser/pages/youxi.htm", "游戏", $(window).width() * 0.96, $(window).height() * 0.9);
+        }
+
+
+        $(function () {
+
+
+        });
+        
+    </script>
+</head>
+<body style="margin: 0px; padding: 0px; " class="ui-mobile-viewport ui-overlay-a">
+<div data-role="page" data-url="shouye.aspx" tabindex="0" class="ui-page ui-page-theme-a ui-page-active">
+    <form method="post" action="USER_DIR/SYSUSER/HOME/MAIN_files/MAIN.htm" id="form2">
+    <div class="cardexplain">
+        <ul class="round">
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="6">
+                <tbody><tr>
+                    <td colspan="3">
+                        <p>
+                            <strong>银川空气质量：</strong>空气指数：81,PM2.5颗粒:32,首要污染物:颗粒物(PM10),空气质量：良</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <p>
+                            <strong>今日英语：</strong>The two most important days in your life are the day you are born, and the day you find out why. 生命中最重要的两个日子，一个是你出生，一个是你发现自己为什么而生。
+                        </p>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td width="32%" height="79">
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a onclick="d_qiandao();" href="#" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/4.png" width="60" height="60">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a onclick="d_qiandao();" href="#" class="ui-link">签到 </a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                    <td width="37%">
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a onclick="d_jifen();" href="#" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/11.png" alt="" width="60" height="60"></a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a onclick="d_jifen();" href="#" class="ui-link">积分</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                    <td width="31%">
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a onclick="d_weixinqiang();" href="#" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/2.png" width="60" height="60"></a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a onclick="d_weixinqiang();" href="#" class="ui-link">发信息</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a onclick="d_shoupingzi();" href="#" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/15.png" width="60" height="60"></a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a onclick="d_shoupingzi();" href="#" class="ui-link">表单</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                    <td>
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a  href="cmd/dingdan.aspx" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/10.png" width="60" height="60"></a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a  href="cmd/dingdan.aspx" class="ui-link">我的订单</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                    <td>
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a onclick="d_sixin();" href="#" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/5.png" width="60" height="60"></a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a onclick="d_sixin();" href="#" class="ui-link">关于</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a  href="../games/index.html" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/3.png" width="60" height="60"></a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a   href="../games/index.html" class="ui-link">游戏</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                    <td>
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a onclick="d_xiaomeng();" href="#" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/9.png" width="60" height="60"></a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a onclick="d_xiaomeng();" href="#" class="ui-link">意见箱</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                    <td>
+                        <table align="center" width="100%" border="0" cellspacing="1" cellpadding="0">
+                            <tbody><tr align="center">
+                                <td>
+                                    <a  href="cmd/shangcheng.aspx" class="ui-link">
+                                        <img src="USER_DIR/SYSUSER/HOME/MAIN_files/1.png" width="60" height="60"></a>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>
+                                    <a href="cmd/shangcheng.aspx" class="ui-link">微商店</a><a  href="shangcheng.aspx" class="ui-link">
+                                </a></td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </ul>
+    </div>
+    </form>
+</body>
+</html>

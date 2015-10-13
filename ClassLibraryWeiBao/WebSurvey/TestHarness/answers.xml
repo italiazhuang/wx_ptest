@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<Answers>
+  <AnswerSet>
+    <Answer questionId="First_Name">Stephen</Answer>
+    <Answer questionId="Last_name">Stchur</Answer>
+    <Answer questionId="Email">sstchur@yahoo.com</Answer>
+    <Answer questionId="Favorite_food">Beer</Answer>
+    <Answer questionId="Sports">Tennis|Football</Answer>
+    <Answer questionId="Description">Javascript and ASP.NET/C# enthusiast; creator of WebSurvey and the Gimme Javascript Library</Answer>
+    <Answer questionId="Survey_is_useful">Yes</Answer>
+    <Answer questionId="Comments">Visit my Javascript blog: http://javascript.stchur.com</Answer>
+  </AnswerSet>
+  <AnswerSet>
+    <Answer questionId="CORPORATE_NAME">asd</Answer>
+    <Answer questionId="CONTACT_NAME">SAD</Answer>
+    <Answer questionId="TITLE">asd</Answer>
+    <Answer questionId="PHONE">ASD</Answer>
+    <Answer questionId="E-MAIL">sad</Answer>
+    <Answer questionId="DBA(S)">asd</Answer>
+    <Answer questionId="NUM_TRANSX">a</Answer>
+    <Answer questionId="Biz_Desc">a</Answer>
+    <Answer questionId="Processor">a</Answer>
+    <Answer questionId="Gateway">af</Answer>
+    <Answer questionId="WebHosting">af</Answer>
+    <Answer questionId="ShoppingCart">asd</Answer>
+    <Answer questionId="CoLocation">asd</Answer>
+    <Answer questionId="Other)">as</Answer>
+    <Answer questionId="POS_Software">asd</Answer>
+    <Answer questionId="1.1">
+    </Answer>
+    <Answer questionId="1.2">
+    </Answer>
+    <Answer questionId="1.3">
+    </Answer>
+    <Answer questionId="1.4">
+    </Answer>
+    <Answer questionId="1.5">
+    </Answer>
+    <Answer questionId="1.6">
+    </Answer>
+    <Answer questionId="1.7">
+    </Answer>
+    <Answer questionId="1.8">
+    </Answer>
+    <Answer questionId="1.9">
+    </Answer>
+    <Answer questionId="1.10">
+    </Answer>
+    <Answer questionId="1.NA">
+    </Answer>
+    <Answer questionId="2.1">
+    </Answer>
+    <Answer questionId="2.2">
+    </Answer>
+    <Answer questionId="2.3">
+    </Answer>
+    <Answer questionId="2.4">
+    </Answer>
+    <Answer questionId="2.5">
+    </Answer>
+    <Answer questionId="2.6">
+    </Answer>
+    <Answer questionId="2.NA">
+    </Answer>
+    <Answer questionId="3.1">
+    </Answer>
+    <Answer questionId="3.2">
+    </Answer>
+    <Answer questionId="3.3">
+    </Answer>
+    <Answer questionId="3.4">
+    </Answer>
+    <Answer questionId="3.5">
+    </Answer>
+    <Answer questionId="3.6">
+    </Answer>
+    <Answer questionId="3.NA">
+    </Answer>
+    <Answer questionId="4.1">
+    </Answer>
+    <Answer questionId="4.2">
+    </Answer>
+    <Answer questionId="4.3">
+    </Answer>
+    <Answer questionId="4.4">
+    </Answer>
+    <Answer questionId="4.5">
+    </Answer>
+    <Answer questionId="4.NA">
+    </Answer>
+    <Answer questionId="5.1">
+    </Answer>
+    <Answer questionId="5.NA">
+    </Answer>
+    <Answer questionId="6.1">
+    </Answer>
+    <Answer questionId="6.2">
+    </Answer>
+    <Answer questionId="6.3">
+    </Answer>
+    <Answer questionId="6.4">
+    </Answer>
+    <Answer questionId="6.5">
+    </Answer>
+    <Answer questionId="6.6">
+    </Answer>
+    <Answer questionId="6.7">
+    </Answer>
+    <Answer questionId="6.8">
+    </Answer>
+    <Answer questionId="6.NA">
+    </Answer>
+    <Answer questionId="7.1">
+    </Answer>
+    <Answer questionId="7.NA">
+    </Answer>
+    <Answer questionId="8.1">
+    </Answer>
+    <Answer questionId="8.2">
+    </Answer>
+    <Answer questionId="8.3">
+    </Answer>
+    <Answer questionId="8.4">
+    </Answer>
+    <Answer questionId="8.5">
+    </Answer>
+    <Answer questionId="8.6">
+    </Answer>
+    <Answer questionId="8.7">
+    </Answer>
+    <Answer questionId="8.8">
+    </Answer>
+    <Answer questionId="8.9">
+    </Answer>
+    <Answer questionId="8.10">
+    </Answer>
+    <Answer questionId="8.11">
+    </Answer>
+    <Answer questionId="8.NA">
+    </Answer>
+    <Answer questionId="9.1">
+    </Answer>
+    <Answer questionId="9.2">
+    </Answer>
+    <Answer questionId="9.3">
+    </Answer>
+    <Answer questionId="9.4">
+    </Answer>
+    <Answer questionId="9.5">
+    </Answer>
+    <Answer questionId="9.6">
+    </Answer>
+    <Answer questionId="9.7">
+    </Answer>
+    <Answer questionId="9.NA">
+    </Answer>
+    <Answer questionId="10.1">
+    </Answer>
+    <Answer questionId="10.2">
+    </Answer>
+    <Answer questionId="10.3">
+    </Answer>
+    <Answer questionId="10.4">
+    </Answer>
+    <Answer questionId="10.5">
+    </Answer>
+    <Answer questionId="10.NA">
+    </Answer>
+    <Answer questionId="11.1">
+    </Answer>
+    <Answer questionId="11.2">
+    </Answer>
+    <Answer questionId="11.3">
+    </Answer>
+    <Answer questionId="11.4">
+    </Answer>
+    <Answer questionId="11.NA">
+    </Answer>
+    <Answer questionId="12.1">
+    </Answer>
+    <Answer questionId="12.2">
+    </Answer>
+    <Answer questionId="12.3">
+    </Answer>
+    <Answer questionId="12.4">
+    </Answer>
+    <Answer questionId="12.5">
+    </Answer>
+    <Answer questionId="12.6">
+    </Answer>
+    <Answer questionId="12.7">
+    </Answer>
+    <Answer questionId="12.8">
+    </Answer>
+    <Answer questionId="12.9">
+    </Answer>
+    <Answer questionId="12.10">
+    </Answer>
+    <Answer questionId="12.11">
+    </Answer>
+    <Answer questionId="12.NA">
+    </Answer>
+  </AnswerSet>
+</Answers>
